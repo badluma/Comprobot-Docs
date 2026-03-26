@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Comprobot",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -20,35 +20,35 @@ const config: QuartzConfig = {
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif",
+        body: "SF Pro Text, -apple-system, BlinkMacSystemFont, sans-serif",
+        code: "SF Mono, Menlo, Monaco, monospace",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
+          light: "#FFFFFF", // Background
+          lightgray: "#F4FDFE",
           gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
+          darkgray: "#000000", // Theme button
+          dark: "#000000", // Text
+          secondary: "#000000", // Accents
           tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          highlight: "#f0f0f088",
+          textHighlight: "#03030388",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
+          light: "#000000", // Background
+          lightgray: "#030303", // Search bar
           gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
+          darkgray: "#FFFFFF", // Theme button
+          dark: "#FFFFFF", // Text
+          secondary: "#FFFFFF", // Accents
           tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          highlight: "#F0F0F088",
+          textHighlight: "#F4FDFE88",
         },
       },
     },
