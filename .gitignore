@@ -1,3 +1,4 @@
 .trash/*
 package-lock.json
 .DS_Store
+source/content/.copilot
