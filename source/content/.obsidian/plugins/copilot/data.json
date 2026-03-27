@@ -294,6 +294,21 @@
       "capabilities": [
         "reasoning"
       ]
+    },
+    {
+      "name": "openai/gpt-oss-120b",
+      "provider": "groq",
+      "enabled": true,
+      "isBuiltIn": false,
+      "baseUrl": "",
+      "apiKey": "",
+      "isEmbeddingModel": false,
+      "capabilities": [
+        "reasoning",
+        "websearch"
+      ],
+      "stream": true,
+      "displayName": "GPT OSS 120b"
     }
   ],
   "activeEmbeddingModels": [

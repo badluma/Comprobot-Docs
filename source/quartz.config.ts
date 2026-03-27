@@ -30,7 +30,7 @@ const config: QuartzConfig = {
       colors: {
         lightMode: {
           light: "#FFFFFF", // Background
-          lightgray: "#F4FDFE",
+          lightgray: "#FFFFFF",
           gray: "#b8b8b8",
           darkgray: "#000000", // Theme button
           dark: "#000000", // Text
@@ -41,7 +41,7 @@ const config: QuartzConfig = {
         },
         darkMode: {
           light: "#000000", // Background
-          lightgray: "#030303", // Search bar
+          lightgray: "#000000", // Search bar
           gray: "#646464",
           darkgray: "#FFFFFF", // Theme button
           dark: "#FFFFFF", // Text
