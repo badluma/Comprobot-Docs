@@ -1,12 +1,12 @@
 The `meme` command returns a random meme from Reddit through the [Meme API](https://meme-api.com/gimme).
 ## Usage
 
-```txt
+```
 !meme
 ```
 
 ## Example response
-```txt
+```
 https://i.redd.it/su7ykkspy4rg1.png
 ```
 

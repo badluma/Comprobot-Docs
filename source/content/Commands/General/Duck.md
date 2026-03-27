@@ -1,18 +1,18 @@
-A command that fetches a random joke from the [Official Jokes API from Appspot](https://official-joke-api.appspot.com/jokes/random) and hides the punchline using Discord's spoiler protection.
+The `duck` command returns a random image from the [Random-Duck](https://random-d.uk) API.
 ## Usage
 
 ```
-!joke
+!duck
 ```
 
 ## Example response
 
 ```
-What do you get when you cross a snowman with a vampire? ||He let out a little wine.||
+https://random-d.uk/api/randomimg?t=1774612345188
 ```
 
-*The text in between `||` is hidden until you click it.*
-
+Preview:
+![](https://random-d.uk/api/randomimg?t=1774612345188)
 ## Source code
 
 ```python
@@ -34,20 +34,12 @@ def access_api(url, parameter, error_message, headers=None):
             response = str(f"{error_message} (Error {str(e)})")
     else:
         response = str(f"{error_message} (HTTP {raw.status_code})")
-
     return response
 
-def joke():
-    setup = access_api(
-        "https://official-joke-api.appspot.com/jokes/random",
-        "setup",
-        error_messages["joke"],
-    )
-    punchline = access_api(
-        "https://official-joke-api.appspot.com/jokes/random",
-        "punchline",
-        error_messages["joke"],
-    )
-    response = f"{setup} ||{punchline}||"
-    return response
+def duck():
+    return access_api(
+	    "https://random-d.uk/api/random", 
+	    "url", 
+	    error_messages["duck"]
+	)
 ```

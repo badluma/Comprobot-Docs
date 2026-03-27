@@ -1,18 +1,18 @@
-A command that fetches a random joke from the [Official Jokes API from Appspot](https://official-joke-api.appspot.com/jokes/random) and hides the punchline using Discord's spoiler protection.
+The `dog` command returns a random image from the [Random.Dog](https://random.dog/)) API.
 ## Usage
 
 ```
-!joke
+!dog
 ```
 
 ## Example response
 
 ```
-What do you get when you cross a snowman with a vampire? ||He let out a little wine.||
+https://random.dog/c70ec919-5ca0-438f-80f2-b292812e19f3.jpg
 ```
 
-*The text in between `||` is hidden until you click it.*
-
+Preview:
+![](https://random.dog/c70ec919-5ca0-438f-80f2-b292812e19f3.jpg)
 ## Source code
 
 ```python
@@ -34,20 +34,12 @@ def access_api(url, parameter, error_message, headers=None):
             response = str(f"{error_message} (Error {str(e)})")
     else:
         response = str(f"{error_message} (HTTP {raw.status_code})")
-
     return response
 
-def joke():
-    setup = access_api(
-        "https://official-joke-api.appspot.com/jokes/random",
-        "setup",
-        error_messages["joke"],
-    )
-    punchline = access_api(
-        "https://official-joke-api.appspot.com/jokes/random",
-        "punchline",
-        error_messages["joke"],
-    )
-    response = f"{setup} ||{punchline}||"
-    return response
+def dog():
+    return access_api(
+	    "https://random.dog/woojson", 
+	    "url", 
+	    error_messages["dog"]
+	)
 ```

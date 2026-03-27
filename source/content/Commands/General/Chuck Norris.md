@@ -1,17 +1,15 @@
-A command that fetches a random joke from the [Official Jokes API from Appspot](https://official-joke-api.appspot.com/jokes/random) and hides the punchline using Discord's spoiler protection.
+The `chuck` command returns a random Chuck Norris joke from the [ChuckNorris.io](https://chucknorris.io) API.
 ## Usage
 
 ```
-!joke
+!chuck
 ```
 
 ## Example response
 
 ```
-What do you get when you cross a snowman with a vampire? ||He let out a little wine.||
+For St. Patrick's day, Chuck Norris caught and crucified a Leprechaun, drank six kegs of green beer and roundhouse kicked the mayor of Boston.
 ```
-
-*The text in between `||` is hidden until you click it.*
 
 ## Source code
 
@@ -37,17 +35,10 @@ def access_api(url, parameter, error_message, headers=None):
 
     return response
 
-def joke():
-    setup = access_api(
-        "https://official-joke-api.appspot.com/jokes/random",
-        "setup",
-        error_messages["joke"],
+def chuck():
+    return access_api(
+        "https://api.chucknorris.io/jokes/random", 
+        "value", 
+        error_messages["chuck"]
     )
-    punchline = access_api(
-        "https://official-joke-api.appspot.com/jokes/random",
-        "punchline",
-        error_messages["joke"],
-    )
-    response = f"{setup} ||{punchline}||"
-    return response
 ```

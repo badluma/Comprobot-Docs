@@ -6,6 +6,7 @@
       {
         "id": "0571c1c94d829fac",
         "type": "tabs",
+        "dimension": 63.388324873096444,
         "children": [
           {
             "id": "47ef711f7e8c1d64",
@@ -55,12 +56,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Commands/General/Meme.md",
+                "file": "Commands/General/Bible.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Meme"
+              "title": "Bible"
             }
           }
         ],
@@ -69,6 +70,7 @@
       {
         "id": "d21e25170f2eef6b",
         "type": "tabs",
+        "dimension": 36.611675126903556,
         "children": [
           {
             "id": "3dbd73efb3f51a7c",
@@ -157,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Commands/General/Meme.md",
+                "file": "Commands/General/Bible.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +169,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Meme"
+              "title": "Backlinks for Bible"
             }
           },
           {
@@ -176,12 +178,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Commands/General/Meme.md",
+                "file": "Commands/General/Bible.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Meme"
+              "title": "Outgoing links from Bible"
             }
           },
           {
@@ -205,13 +207,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Commands/General/Meme.md",
+                "file": "Commands/General/Bible.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Meme"
+              "title": "Outline of Bible"
             }
           }
         ]
@@ -236,9 +238,16 @@
   },
   "active": "1b7b5b912fdf1124",
   "lastOpenFiles": [
-    "Commands/General/Quote.md",
-    "Commands/General/Joke.md",
+    "Commands/General/Fact.md",
+    "Commands/General/Bible.md",
+    "Commands/General/Untitled.md",
+    "Commands/General/Chuck Norris.md",
     "Commands/General/Meme.md",
+    "Commands/General/Cat.md",
+    "Commands/General/Quote.md",
+    "Commands/General/Dog.md",
+    "Commands/General/Duck.md",
+    "Commands/General/Joke.md",
     "Commands/General/Dad joke.md",
     "copilot/copilot-custom-prompts/Clip Web Page.md",
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
@@ -257,12 +266,9 @@
     "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts",
     "copilot",
-    "Commands/index.md",
     "Commands/Money",
     "Commands/Settings",
     "Commands/General",
-    "Commands/Some note.md",
-    "index.md",
     "Commands"
   ]
 }

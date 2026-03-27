@@ -1,13 +1,13 @@
 The `quote` command returns a random command from the [zenquotes.io](https://zenquotes.io/) API.
 ## Usage
 
-```txt
+```
 !quote
 ```
 
 ## Example response
 
-```txt
+```
 Change yourself - you are in control. 
 ~Mahatma Gandhi
 ```
