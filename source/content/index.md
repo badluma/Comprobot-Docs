@@ -10,37 +10,37 @@ It also comes with built-in AI capabilities when pinging the bot, with Ollama, G
 
 ## Table of contents
 
-- [Commands]([[Commands/index|index]])
-  - [General]([[Commands/General/index|index]])
-    - [ASCII Art]([[Commands/General/ASCII Art]])
-    - [Bible]([[Commands/General/Bible]])
-    - [Bitcoin]([[Commands/General/Bitcoin]])
-    - [Calculate]([[Commands/General/Calculate]])
+- [Commands](https://badluma.github.io/Comprobot-Docs/Commands)
+  - [General](https://badluma.github.io/Comprobot-Docs/Commands/General)
+    - [[Commands/General/ASCII Art]]
+    - [[Commands/General/Bible]]
+    - [[Commands/General/Bitcoin]]
+    - [[Commands/General/Calculate]]
     - [[Commands/General/Cat]]
-    - [Chuck Norris]([[Commands/General/Chuck Norris]])
-    - [Currency]([[Commands/General/Currency]])
-    - [Dare]([[Commands/General/Dare]])
-    - [Dog]([[Commands/General/Dog]])
-    - [Duck]([[Commands/General/Duck]])
-    - [Fact]([[Commands/General/Fact]])
-    - [Image]([[Commands/General/Image]])
-    - [Joke]([[Commands/General/Joke]])
-    - [Meme]([[Commands/General/Meme]])
-    - [Never Have I Ever]([[Commands/General/Never Have I Ever]])
-    - [Paranoia]([[Commands/General/Paranoia]])
-    - [QR Code]([[Commands/General/QR Code]])
-    - [Quote]([[Commands/General/Quote]])
-    - [Truth]([[Commands/General/Truth]])
-    - [Waifu]([[Commands/General/Waifu]])
-    - [WYR]([[Commands/General/WYR]])
-  - [Money]([[Commands/Money/index|index]])
-    - [Add Money]([[Commands/Money/Add Money]])
-    - [Balance]([[Commands/Money/Balance]])
-    - [Remove Money]([[Commands/Money/Remove Money]])
-  - [Settings]([[Commands/Settings/index|index]])
-    - [Banner]([[Commands/Settings/Banner]])
-    - [Change Keywords]([[Commands/Settings/Change Keywords]])
-    - [Change Name]([[Commands/Settings/Change Name]])
-    - [Profile Picture]([[Commands/Settings/Profile Picture]])
-  - [Moderation]([[Commands/Moderation/index|index]])
-    - [Purge]([[Commands/Moderation/Purge]])
+    - [[Commands/General/Chuck Norris]]
+    - [[Commands/General/Currency]]
+    - [[Commands/General/Dare]]
+    - [[Commands/General/Dog]]
+    - [[Commands/General/Duck]]
+    - [[Commands/General/Fact]]
+    - [[Commands/General/Image]]
+    - [[Commands/General/Joke]]
+    - [[Commands/General/Meme]]
+    - [[Commands/General/Never Have I Ever]]
+    - [[Commands/General/Paranoia]]
+    - [[Commands/General/QR Code]]
+    - [[Commands/General/Quote]]
+    - [[Commands/General/Truth]]
+    - [[Commands/General/Waifu]]
+    - [[Commands/General/WYR]]
+  - [Money](https://badluma.github.io/Comprobot-Docs/Commands/Money)
+    - [[Commands/Money/Add Money]]
+    - [[Commands/Money/Balance]]
+    - [[Commands/Money/Remove Money]]
+  - [Settings](https://badluma.github.io/Comprobot-Docs/Commands/Settings)
+    - [[Commands/Settings/Banner]]
+    - [[Commands/Settings/Change Keywords]]
+    - [[Commands/Settings/Change Name]]
+    - [[Commands/Settings/Profile Picture]]
+  - [Moderation](https://badluma.github.io/Comprobot-Docs/Commands/Moderation)
+    - [[Commands/Moderation/Purge]]
