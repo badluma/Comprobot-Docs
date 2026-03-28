@@ -35,9 +35,9 @@ const config: QuartzConfig = {
           darkgray: "#000000", // Theme button
           dark: "#000000", // Text
           secondary: "#000000", // Accents
-          tertiary: "#84a59d",
-          highlight: "#f0f0f088",
-          textHighlight: "#03030388",
+          tertiary: "#000000",
+          highlight: "#000000",
+          textHighlight: "#000000",
         },
         darkMode: {
           light: "#000000", // Background
@@ -46,9 +46,9 @@ const config: QuartzConfig = {
           darkgray: "#FFFFFF", // Theme button
           dark: "#FFFFFF", // Text
           secondary: "#FFFFFF", // Accents
-          tertiary: "#84a59d",
-          highlight: "#F0F0F088",
-          textHighlight: "#F4FDFE88",
+          tertiary: "#FFFFFF",
+          highlight: "#FFFFFF",
+          textHighlight: "#FFFFFF",
         },
       },
     },
