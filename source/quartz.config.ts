@@ -36,7 +36,7 @@ const config: QuartzConfig = {
           dark: "#000000", // Text
           secondary: "#000000", // Accents
           tertiary: "#000000",
-          highlight: "#000000",
+          highlight: "#FFFFFF",
           textHighlight: "#000000",
         },
         darkMode: {
@@ -47,7 +47,7 @@ const config: QuartzConfig = {
           dark: "#FFFFFF", // Text
           secondary: "#FFFFFF", // Accents
           tertiary: "#FFFFFF",
-          highlight: "#FFFFFF",
+          highlight: "#000000",
           textHighlight: "#FFFFFF",
         },
       },

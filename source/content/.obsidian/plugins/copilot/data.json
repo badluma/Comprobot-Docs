@@ -42,7 +42,7 @@
   "defaultSendShortcut": "enter",
   "customPromptsFolder": ".copilot/copilot-custom-prompts",
   "indexVaultToVectorStore": "ON MODE SWITCH",
-  "qaExclusions": "",
+  "qaExclusions": "copilot",
   "qaInclusions": "",
   "chatNoteContextPath": "",
   "chatNoteContextTags": [],

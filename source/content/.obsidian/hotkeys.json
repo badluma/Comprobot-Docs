@@ -1,0 +1,12 @@
+{
+  "terminal:close-terminal": [],
+  "terminal:find-in-terminal": [],
+  "terminal:open-terminal.default": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F12"
+    }
+  ]
+}
