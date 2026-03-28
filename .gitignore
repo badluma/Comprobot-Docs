@@ -3,4 +3,6 @@ package-lock.json
 .DS_Store
 source/content/.copilot
 source/content/.obsidian/plugins/copilot/*
+public/
+source/quartz/.quartz-cache/*
 node_modules/
