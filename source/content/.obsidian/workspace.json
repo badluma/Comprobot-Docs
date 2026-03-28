@@ -90,12 +90,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Commands/General/Dare.md",
+                    "file": "index.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "Dare"
+                  "title": "index"
                 }
               }
             ],
@@ -312,7 +312,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "4990dc22b3271e9f",
+  "active": "f4bac4edf057efd3",
   "lastOpenFiles": [
     "Commands/General/Dare.md",
     "Commands/General/QR Code.md",

@@ -16,7 +16,7 @@ It also comes with built-in AI capabilities when pinging the bot, with Ollama, G
     - [Bible]([[Commands/General/Bible]])
     - [Bitcoin]([[Commands/General/Bitcoin]])
     - [Calculate]([[Commands/General/Calculate]])
-    - [Cat]([[Commands/General/Cat]])
+    - [[Commands/General/Cat]]
     - [Chuck Norris]([[Commands/General/Chuck Norris]])
     - [Currency]([[Commands/General/Currency]])
     - [Dare]([[Commands/General/Dare]])
