@@ -3,3 +3,4 @@ package-lock.json
 .DS_Store
 source/content/.copilot
 source/content/.obsidian/plugins/copilot/*
+node_modules/

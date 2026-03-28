@@ -12,6 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
+    "noEmit": true,
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
