@@ -4,13 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "6b46f0c40dcd64da",
+        "id": "155e33a8ccca2955",
         "type": "split",
         "children": [
           {
             "id": "0571c1c94d829fac",
             "type": "tabs",
-            "dimension": 64.2620232172471,
             "children": [
               {
                 "id": "47ef711f7e8c1d64",
@@ -58,12 +57,11 @@
             "currentTab": 2
           },
           {
-            "id": "c95218494b9e4013",
+            "id": "1e61889441727e17",
             "type": "tabs",
-            "dimension": 35.7379767827529,
             "children": [
               {
-                "id": "4990dc22b3271e9f",
+                "id": "c60fc57de613b303",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
@@ -101,7 +99,7 @@
                   },
                   "pinned": true,
                   "icon": "terminal",
-                  "title": "Terminal: OC | Unnecessary file link aliases in inde..."
+                  "title": "Terminal: zsh"
                 }
               }
             ]
@@ -252,7 +250,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 501.5
+    "width": 371.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -268,7 +266,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "4990dc22b3271e9f",
+  "active": "c60fc57de613b303",
   "lastOpenFiles": [
     "index.md",
     "Commands/General.md",
