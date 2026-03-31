@@ -5,7 +5,7 @@ Comprobot is available to install with both `pipx` and `pip`. However, I recomme
 Before we get started with installing Comprobot, you first have to install Python (since Comprobot is coded in Python). 
 ### Windows
 
-> ⚠︎ I don't personally own a Windows machine, so I had to rely on YouTube tutorials and other documentation. If you run into any issues, you can join my [Discord server](https://discord.gg/g6rZtmQgbK) and write a message in the *\#bug-reports* channel with all the details of the error.
+> ⚠︎ I don't personally own a Windows machine, so I had to rely on YouTube tutorials and other documentation. If you run into any issues, you can join my [Discord server](https://discord.gg/g6rZtmQgbK) and write a message in the *bug-reports* channel with all the details of the error.
 #### Verify Python installation 
 
 First off, you should make sure that you don't have Python installed already. You can do that by opening the PowerShell and typing the following command:
@@ -86,7 +86,7 @@ python3 --version
 pip3 --version
 ```
 
-If one of the commands returns an error, drop me a message under *\#bug-reports* on my [Discord server](https://discord.gg/g6rZtmQgbK). 
+If one of the commands returns an error, drop me a message in the *bug-reports* channel on my [Discord server](https://discord.gg/g6rZtmQgbK). 
 
 ### Linux
 
@@ -127,7 +127,7 @@ python3 --version
 pip3 --version
 ```
 
-If they return the version numbers, you're good to go. Otherwise, you can always drop me a message in the *\#bug-reports* channel on my [Discord server](https://discord.gg/g6rZtmQgbK).
+If they return the version numbers, you're good to go. Otherwise, you can always drop me a message in the *bug-reports* channel on my [Discord server](https://discord.gg/g6rZtmQgbK).
 
 
 ## Installing `pipx`
