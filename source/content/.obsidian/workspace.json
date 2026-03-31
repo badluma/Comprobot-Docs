@@ -189,6 +189,16 @@
         "type": "tabs",
         "children": [
           {
+            "id": "511f1c629160f28b",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
             "id": "2aa5a4c073617928",
             "type": "leaf",
             "state": {
@@ -250,23 +260,12 @@
               "icon": "lucide-list",
               "title": "Outline of index"
             }
-          },
-          {
-            "id": "511f1c629160f28b",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 371.5
+    "width": 355.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -282,7 +281,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "1499b412b24df616",
+  "active": "511f1c629160f28b",
   "lastOpenFiles": [
     "Installation.md",
     "Version History.md",

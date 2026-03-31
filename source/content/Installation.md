@@ -1,5 +1,6 @@
 Comprobot is available to install with both `pipx` and `pip`. However, I recommend installing it using `pipx`, since it is designed to install Python applications tools such as Comprobot. This guide is fully self-written, no AI used.
 
+---
 ## Installing Python and `pip`
 
 Before we get started with installing Comprobot, you first have to install Python (since Comprobot is coded in Python). 
@@ -129,7 +130,7 @@ pip3 --version
 
 If they return the version numbers, you're good to go. Otherwise, you can always drop me a message in the *bug-reports* channel on my [Discord server](https://discord.gg/g6rZtmQgbK).
 
-
+---
 ## Installing `pipx`
 
 To install Comprobot, I recommend using `pipx`, a command-line tool designed to install Python applications. Here is how to install it.
@@ -211,7 +212,7 @@ Once it's done installing, you can check if everything worked by running the fol
 pipx --version
 ```
 
-
+---
 ## Install Comprobot
 
 Now that you have all the required packages installed, we can proceed to install the actual bot. You can do that easily on all three operating systems with the following command.
@@ -219,3 +220,109 @@ Now that you have all the required packages installed, we can proceed to install
 ```bash
 pipx install comprobot
 ```
+
+---
+## Setting up the Discord bot
+
+Since you now have all the files on your machine, we now have to take care of the bot itself. To add it to your server, follow the following steps.
+
+### Creating the bot
+
+To create the discord bot, head to the [Discord Developer Portal](https://discord.com/developers/applications) and sign into your Discord account.
+
+- Click on the "New Application"
+- Give your Bot a cool name.
+- Check the Checkbox on
+- Click "Create"
+
+### Customizing the appearance
+
+You should now be in the configuration window of your bot.
+
+- Customize your bot's app icon in the "General Information" tab
+- To customize the bot's avatar and banner, head to the "Bot" section in the sidebar
+- Here, you can set a custom avatar and banner and a few other things, such as the username.
+
+### Setting the bot token
+
+- Next, click the "Reset token" button
+- Click "Yes, do it!"
+- Authenticate with your Passkey or similar if prompted.
+- Click on "Copy"
+- Store the token somewhere safe where you can access it later.
+- If you want, you can also check the "Public bot" setting off, so that only you can add the bot to servers (leave it on if you aren't the admin of the server you want to add the bot to, since the bot will have to be added by the admin)
+
+### Generating the invite link
+
+- Head to the "OAuth2" tab
+- Scroll down to "OAuth2 URL Generator"
+- Check only the box "bot" on.
+- Scroll down to "Bot permissions"
+- Only check "Administrator" on.
+- Scroll down to the generated URL
+- Copy the URL
+
+### Adding the bot to the server
+
+Now, you can open the link in a new tab, select the wanted server and click "Authorize". If you are not the admin of the server the bot should be added to, send the link to the server owner so they can add the bot themselves.
+
+--- 
+## Customizing the settings
+
+Now, you want to add the bot token that you saved before to the bot. For that, you want to head to the data directory of your bot. To get the data directory, run the bot through your terminal with the following command.
+
+```bash
+comprobot
+```
+
+The output should look something like this:
+
+```
+Configuration directory: /path/to/configuration/files
+Error: BOT_TOKEN not found in environment variables
+```
+
+Copy the path that is displayed after "Configuration directory". Open a new window of your terminal and run the following command (replace the example path with your copied path)
+
+```bash
+cd /path/to/configuration/files
+```
+
+Then run the following command to open the .env file, based on your operating system.
+
+Windows: 
+```powershell
+start .env
+```
+
+MacOS or Linux:
+```bash
+open .env
+```
+
+Paste the token for the Discord bot that you saved before like this. If you want, you can also add your API keys for the AI functionalities too. I recommend using [Groq](https://console.groq.com/keys), as it offers a wide range of free small models with high rate limits for completely free.
+
+```
+BOT_TOKEN=YOUR_DISCORD_BOT_TOKEN
+GEMINI=YOUR_GEMINI_API_KEY
+GROQ=YOUR_GROQ_API_KEY
+```
+
+Save the file and open a new terminal window. Run the following command to start the bot.
+
+```bash
+comprobot
+```
+
+It should return something like the following.
+
+```
+Configuration directory: /Users/silasbergen/Library/Application Support/Comprobot
+2026-03-31 15:15:01 INFO     discord.client logging in using static token
+2026-03-31 15:15:03 INFO     discord.gateway Shard ID None has connected to Gateway (Session ID: 1234567890).
+Logged in as Comprobot
+```
+
+Now, head to the discord server and run a test command, such as `!play`. If it works, then congratulations, you've successfully set up Comprobot! You can customize all of the settings in the `.toml` files in the configuration directory. 
+
+Thanks for using Comprobot! I really appreciate it. If you like it, I would be glad if you told your friends about it too!
