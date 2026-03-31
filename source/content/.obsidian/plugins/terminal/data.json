@@ -163,8 +163,8 @@
   },
   "defaultProfile": "darwinIntegratedDefault",
   "terminalOptions": {
-    "documentOverride": null,
     "fontFamily": "SF Mono",
-    "fontSize": 12
+    "fontSize": 12,
+    "documentOverride": null
   }
 }

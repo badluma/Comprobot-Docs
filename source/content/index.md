@@ -10,8 +10,8 @@ It also comes with built-in AI capabilities when pinging the bot, with Ollama, G
 
 ## Table of contents
 
-- [Commands](https://badluma.github.io/Comprobot-Docs/Commands)
-  - [General](https://badluma.github.io/Comprobot-Docs/Commands/General)
+- **Commands**
+  - **General**
     - [[Commands/General/ASCII Art]]
     - [[Commands/General/Bible]]
     - [[Commands/General/Bitcoin]]
@@ -33,14 +33,14 @@ It also comes with built-in AI capabilities when pinging the bot, with Ollama, G
     - [[Commands/General/Truth]]
     - [[Commands/General/Waifu]]
     - [[Commands/General/WYR]]
-  - [Money](https://badluma.github.io/Comprobot-Docs/Commands/Money)
+  - Money
     - [[Commands/Money/Add Money]]
     - [[Commands/Money/Balance]]
     - [[Commands/Money/Remove Money]]
-  - [Settings](https://badluma.github.io/Comprobot-Docs/Commands/Settings)
+  - Settings
     - [[Commands/Settings/Banner]]
     - [[Commands/Settings/Change Keywords]]
     - [[Commands/Settings/Change Name]]
     - [[Commands/Settings/Profile Picture]]
-  - [Moderation](https://badluma.github.io/Comprobot-Docs/Commands/Moderation)
+  - Moderation
     - [[Commands/Moderation/Purge]]

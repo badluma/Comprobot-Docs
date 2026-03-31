@@ -3,5 +3,7 @@
   "obsidian-minimal-settings",
   "vault-nickname",
   "copilot",
-  "terminal"
+  "terminal",
+  "slash-complete",
+  "obsidian-discordrpc"
 ]

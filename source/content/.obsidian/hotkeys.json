@@ -8,5 +8,21 @@
       ],
       "key": "F12"
     }
+  ],
+  "obsidian-discordrpc:reconnect-discord": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F11"
+    }
+  ],
+  "obsidian-discordrpc:disconnect-discord": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F10"
+    }
   ]
 }

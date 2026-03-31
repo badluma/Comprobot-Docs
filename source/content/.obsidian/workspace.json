@@ -10,6 +10,7 @@
           {
             "id": "0571c1c94d829fac",
             "type": "tabs",
+            "dimension": 83.40248962655602,
             "children": [
               {
                 "id": "47ef711f7e8c1d64",
@@ -52,13 +53,28 @@
                   "icon": "lucide-file",
                   "title": "index"
                 }
+              },
+              {
+                "id": "1499b412b24df616",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Installation.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Installation"
+                }
               }
             ],
-            "currentTab": 2
+            "currentTab": 3
           },
           {
             "id": "1e61889441727e17",
             "type": "tabs",
+            "dimension": 16.59751037344398,
             "children": [
               {
                 "id": "c60fc57de613b303",
@@ -124,7 +140,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byCreatedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -266,8 +282,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "c60fc57de613b303",
+  "active": "1499b412b24df616",
   "lastOpenFiles": [
+    "Installation.md",
+    "Version History.md",
     "index.md",
     "Commands/General.md",
     "Commands/General/Quote.md",
@@ -293,9 +311,6 @@
     "Commands/General/Joke.md",
     "Commands/General/index.md",
     "Commands/General/Currency.md",
-    "Commands/Settings/Profile Picture.md",
-    "Commands/Settings/index.md",
-    "Commands/General/Bitcoin.md",
     "Commands/Moderation",
     "copilot/copilot-custom-prompts",
     "copilot",
