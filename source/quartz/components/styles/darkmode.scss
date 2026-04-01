@@ -2,7 +2,7 @@
   cursor: pointer;
   padding: 0;
   position: relative;
-  background-color: var(--lightgray);
+  background-color: var(--light);
   border: none;
   border-radius: 4px;
   width: 2rem;
@@ -18,7 +18,13 @@
     width: 18px;
     height: 18px;
     fill: var(--darkgray);
-    transition: opacity 0.1s ease;
+    transition:
+      opacity 0.1s ease,
+      fill 0.2s ease;
+  }
+
+  &:hover svg {
+    fill: var(--hover);
   }
 }
 

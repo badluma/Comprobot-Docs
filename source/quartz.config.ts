@@ -30,25 +30,27 @@ const config: QuartzConfig = {
       colors: {
         lightMode: {
           light: "#FFFFFF", // Background
-          lightgray: "#FFFFFF",
+          lightgray: "#EBEBEB",
           gray: "#b8b8b8",
           darkgray: "#000000", // Theme button
           dark: "#000000", // Text
           secondary: "#000000", // Accents
-          tertiary: "#000000",
+          tertiary: "#C0C0C0",
           highlight: "#FFFFFF",
           textHighlight: "#000000",
+          hover: "#797979",
         },
         darkMode: {
           light: "#000000", // Background
-          lightgray: "#000000", // Search bar
+          lightgray: "#212121",
           gray: "#646464",
           darkgray: "#FFFFFF", // Theme button
           dark: "#FFFFFF", // Text
           secondary: "#FFFFFF", // Accents
-          tertiary: "#FFFFFF",
+          tertiary: "#5E5E5E",
           highlight: "#000000",
           textHighlight: "#FFFFFF",
+          hover: "#929292",
         },
       },
     },

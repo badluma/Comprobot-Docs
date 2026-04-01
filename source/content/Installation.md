@@ -1,13 +1,20 @@
-Comprobot is available to install with both `pipx` and `pip`. However, I recommend installing it using `pipx`, since it is designed to install Python applications tools such as Comprobot. This guide is fully self-written, no AI used.
+---
+position: "2"
+---
+
+Comprobot is available to install with both pipx and pip. However, I recommend installing it using pipx, since it is designed to install Python applications tools such as Comprobot. This guide is fully self-written, no AI used.
 
 ---
-## Installing Python and `pip`
 
-Before we get started with installing Comprobot, you first have to install Python (since Comprobot is coded in Python). 
+## Installing Python and pip
+
+Before we get started with installing Comprobot, you first have to install Python (since Comprobot is coded in Python).
+
 ### Windows
 
-> ⚠︎ I don't personally own a Windows machine, so I had to rely on YouTube tutorials and other documentation. If you run into any issues, you can join my [Discord server](https://discord.gg/g6rZtmQgbK) and write a message in the *bug-reports* channel with all the details of the error.
-#### Verify Python installation 
+> ⚠︎ I don't personally own a Windows machine, so I had to rely on YouTube tutorials and other documentation. If you run into any issues, you can join my [Discord server](https://discord.gg/g6rZtmQgbK) and write a message in the _bug-reports_ channel with all the details of the error.
+
+#### Verify Python installation
 
 First off, you should make sure that you don't have Python installed already. You can do that by opening the PowerShell and typing the following command:
 
@@ -21,41 +28,18 @@ If it returns something like `Python 3.14.3`, you already have Python installed,
 
 To install Python on Windows, download the latest Installer from the [official Website](https://www.python.org/downloads/). When it's finished downloading, open the Installer and check "Add Python to PATH". Then click "Install now".
 
-#### Verify `pip` installation
-
-Next, you're gonna wanna install `pip`, the built-in Python package manager. To ensure that it isn't already installed, run the following command in PowerShell.
-
-```powershell
-pip --version
-```
-
-If it returns something like `pip 26.0.1 from ...`, you already have it installed and can skip the next section. If it returns an error on the other hand, you first have to install it again. 
-
-#### Install `pip`
-
-To install `pip`, you have to right click [this link](https://bootstrap.pypa.io/pip/get-pip.py) and click "Save link as". Then choose Desktop as the location, and make sure the name of the file is `get-pip.py`. Next, right click on your Desktop and click "Open PowerShell window here". A PowerShell window should open. Next, run the following command to execute the script.
-
-```powershell
-python ./get-pip.py
-```
-
-Next, run the following command. It should return an error.
-
-```powershell
-pip --version
-```
-
-In the error details, there should be a path for a directory, e.g. `C:\Users\Username\AppData\Local\Programs\Python\Python314\Scripts`. Copy that path from the error details. Next, hit the Windows key on your keyboard (or click the Windows logo in the taskbar) and type "Edit the system environment variables", and click on the first option. A window called "System Properties" should open. Click on the "Environment Variables..." button. Another window should open called "Environment variables" with two lists in it. In the top list, click "PATH" and then "Edit". Then, click on one of the empty spots and paste the path that you copied from the error message and press Enter and click OK. 
+Modern Python installers (3.4+) include pip by default, so you don't need to install it separately.
 
 #### Final check
 
-Next, to make sure that everything worked, execute the following command in a new PowerShell window.
+To verify that Python and pip are installed, run the following commands in a new PowerShell window.
 
 ```powershell
+python --version
 pip --version
 ```
 
-If it returns something like `pip 26.0.1 from ...`, then congratulations, you made it through the entire Python installation process!
+If they return version numbers, you're good to go!
 
 ### MacOS
 
@@ -69,15 +53,15 @@ python3 --version
 
 If it returns something like `Python 3.10.14`, you already have Python installed, so you can skip the next section. If it returns an error however, you need to install Python first.
 
-#### Download and install Python and `pip`
+#### Download and install Python and pip
 
-To download and install Python on MacOS, head to the [official Python website](https://www.python.org/downloads/) and download the latest installer for MacOS. As soon as the installer is finished downloading, open it and click "Continue" until you the License Agreement shows up. Click "Agree" and then "Install". You will probably be prompted to enter your password. Enter it and click "Install Software". If the installer prompts you to access any files or folders, click "OK". If a Finder window pops up, close it and return to the installer. As soon as the installation is finished, click "Close", and then "Move to Bin". 
+To download and install Python on MacOS, head to the [official Python website](https://www.python.org/downloads/) and download the latest installer for MacOS. As soon as the installer is finished downloading, open it and click "Continue" until you the License Agreement shows up. Click "Agree" and then "Install". You will probably be prompted to enter your password. Enter it and click "Install Software". If the installer prompts you to access any files or folders, click "OK". If a Finder window pops up, close it and return to the installer. As soon as the installation is finished, click "Close", and then "Move to Bin".
 
->If you already have Homebrew installed, you can also install Python using Homebrew, by running `brew install python3`.
+> If you already have Homebrew installed, you can also install Python using Homebrew, by running `brew install python3`.
 
 #### Final check
 
-Now, you should have Python and `pip` installed. To check, run the two following commands.
+Now, you should have Python and pip installed. To check, run the two following commands.
 
 ```bash
 python3 --version
@@ -87,11 +71,12 @@ python3 --version
 pip3 --version
 ```
 
-If one of the commands returns an error, drop me a message in the *bug-reports* channel on my [Discord server](https://discord.gg/g6rZtmQgbK). 
+If one of the commands returns an error, you can submit a report the _bug-reports_ channel on my [Discord server](https://discord.gg/g6rZtmQgbK).
 
 ### Linux
 
 This guide is designed mainly for Ubuntu, but it also works for other distributions that use the `apt` package manager, such as Debian and Raspberry Pi OS.
+
 #### Update packages
 
 Before we get started with installing Python, make sure that all your packages are up-to-date with the following commands.
@@ -117,33 +102,34 @@ Installing Python on Linux is really easy. You can just use the built-in package
 sudo apt install python3 python3-pip python3-venv
 ```
 
-This will install Python, including `pip`, the built-in package manager for Python and the Virtual Environment module, which is also needed. 
+This will install Python, including pip, the built-in package manager for Python and the Virtual Environment module, which is also needed.
 
 #### Final check
 
-To verify that Python and `pip` are installed, run the following commands.
+To verify that Python and pip are installed, run the following commands.
 
 ```bash
 python3 --version
 pip3 --version
 ```
 
-If they return the version numbers, you're good to go. Otherwise, you can always drop me a message in the *bug-reports* channel on my [Discord server](https://discord.gg/g6rZtmQgbK).
+If they return the version numbers, you're good to go. Otherwise, you can always submit a report in the _bug-reports_ channel on my [Discord server](https://discord.gg/g6rZtmQgbK).
 
 ---
-## Installing `pipx`
 
-To install Comprobot, I recommend using `pipx`, a command-line tool designed to install Python applications. Here is how to install it.
+## Installing pipx
+
+To install Comprobot, I recommend using pipx, a command-line tool designed to install Python applications. Here is how to install it.
 
 ### Windows
 
-First of all, check if you already have `pipx` installed by running the following command. If it returns the version number, you can skip to the installation of Comprobot.
+First of all, check if you already have pipx installed by running the following command. If it returns the version number, you can skip to the installation of Comprobot.
 
 ```powershell
 pipx --version
 ```
 
-To install `pipx` on Windows, you first have to run the following command. 
+To install pipx on Windows, you first have to run the following command.
 
 ```powershell
 python -m pip install --user pipx
@@ -155,7 +141,7 @@ After that, you want to add it to your PATH. This is easily done by running the 
 python -m pipx ensurepath
 ```
 
-Next, you have to restart your terminal. After that, run the following command to ensure that `pipx` is in your PATH.
+Next, you have to restart your terminal. After that, run the following command to ensure that pipx is in your PATH.
 
 ```powershell
 pipx --version
@@ -165,13 +151,13 @@ If it prints the version number, you're good to go.
 
 ### MacOS
 
-The process of installing `pipx` on MacOS is pretty much the same as on Windows. You can install it by running the following command.
+The process of installing pipx on MacOS is pretty much the same as on Windows. You can install it by running the following command.
 
 ```bash
 python -m pip install --user pipx
 ```
 
->Again, if you prefer Homebrew, you can also install `pipx` with Homebrew by running `brew install pipx`.
+> Again, if you prefer Homebrew, you can also install pipx with Homebrew by running `brew install pipx`.
 
 Next, to add it to your PATH, run the following command.
 
@@ -194,13 +180,13 @@ sudo apt update
 sudo apt upgrade
 ```
 
-Then, check if you already have `pipx` installed. If the following command returns a version number, skip to the installation of Comprobot.
+Then, check if you already have pipx installed. If the following command returns a version number, skip to the installation of Comprobot.
 
 ```bash
 pipx --version
 ```
 
-To install `pipx`, simply use `apt` to install it with the following command.
+To install pipx, simply use `apt` to install it with the following command.
 
 ```bash
 sudo apt install pipx
@@ -213,6 +199,7 @@ pipx --version
 ```
 
 ---
+
 ## Install Comprobot
 
 Now that you have all the required packages installed, we can proceed to install the actual bot. You can do that easily on all three operating systems with the following command.
@@ -222,6 +209,7 @@ pipx install comprobot
 ```
 
 ---
+
 ## Setting up the Discord bot
 
 Since you now have all the files on your machine, we now have to take care of the bot itself. To add it to your server, follow the following steps.
@@ -266,7 +254,8 @@ You should now be in the configuration window of your bot.
 
 Now, you can open the link in a new tab, select the wanted server and click "Authorize". If you are not the admin of the server the bot should be added to, send the link to the server owner so they can add the bot themselves.
 
---- 
+---
+
 ## Customizing the settings
 
 Now, you want to add the bot token that you saved before to the bot. For that, you want to head to the data directory of your bot. To get the data directory, run the bot through your terminal with the following command.
@@ -290,12 +279,14 @@ cd /path/to/configuration/files
 
 Then run the following command to open the .env file, based on your operating system.
 
-Windows: 
+Windows:
+
 ```powershell
 start .env
 ```
 
 MacOS or Linux:
+
 ```bash
 open .env
 ```
@@ -317,12 +308,12 @@ comprobot
 It should return something like the following.
 
 ```
-Configuration directory: /Users/silasbergen/Library/Application Support/Comprobot
+Configuration directory: /Users/Username/Library/Application Support/Comprobot
 2026-03-31 15:15:01 INFO     discord.client logging in using static token
 2026-03-31 15:15:03 INFO     discord.gateway Shard ID None has connected to Gateway (Session ID: 1234567890).
 Logged in as Comprobot
 ```
 
-Now, head to the discord server and run a test command, such as `!play`. If it works, then congratulations, you've successfully set up Comprobot! You can customize all of the settings in the `.toml` files in the configuration directory. 
+Now, head to the discord server and run a test command, such as `!play`. If it works, then congratulations, you've successfully set up Comprobot! You can customize all of the settings in the `.toml` files in the configuration directory.
 
 Thanks for using Comprobot! I really appreciate it. If you like it, I would be glad if you told your friends about it too!

@@ -8,6 +8,17 @@ export type SortFn = (f1: QuartzPluginData, f2: QuartzPluginData) => number
 
 export function byDateAndAlphabetical(cfg: GlobalConfiguration): SortFn {
   return (f1, f2) => {
+    const f1Pos = f1.frontmatter?.position as number | undefined
+    const f2Pos = f2.frontmatter?.position as number | undefined
+
+    if (f1Pos != null && f2Pos != null) {
+      return f1Pos - f2Pos
+    } else if (f1Pos != null) {
+      return -1
+    } else if (f2Pos != null) {
+      return 1
+    }
+
     if (f1.dates && f2.dates) {
       // sort descending
       return getDate(cfg, f2)!.getTime() - getDate(cfg, f1)!.getTime()

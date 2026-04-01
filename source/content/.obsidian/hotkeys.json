@@ -1,6 +1,14 @@
 {
   "terminal:close-terminal": [],
   "terminal:find-in-terminal": [],
+  "terminal:clear-terminal": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "K"
+    }
+  ],
   "terminal:open-terminal.default": [
     {
       "modifiers": [
@@ -23,6 +31,15 @@
         "Alt"
       ],
       "key": "F10"
+    }
+  ],
+  "editor:insert-link": [],
+  "global-search:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "K"
     }
   ]
 }

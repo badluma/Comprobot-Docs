@@ -17,21 +17,22 @@ const defaultOptions = {
     return node
   },
   sortFn: (a, b) => {
-    // Sort order: folders first, then files. Sort folders and files alphabetically
-    if ((!a.file && !b.file) || (a.file && b.file)) {
-      // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
-      // sensitivity: "base": Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A
-      return a.displayName.localeCompare(b.displayName, undefined, {
-        numeric: true,
-        sensitivity: "base",
-      })
+    const aPos = a.file?.frontmatter?.position as number | undefined
+    const bPos = b.file?.frontmatter?.position as number | undefined
+
+    if (aPos != null && bPos != null) {
+      return aPos - bPos
+    } else if (aPos != null) {
+      return -1
+    } else if (bPos != null) {
+      return 1
     }
 
-    if (a.file && !b.file) {
-      return 1
-    } else {
-      return -1
-    }
+    // Sort alphabetically
+    return a.displayName.localeCompare(b.displayName, undefined, {
+      numeric: true,
+      sensitivity: "base",
+    })
   },
   filterFn: (node) => node.name !== "tags",
   order: ["filter", "map", "sort"],

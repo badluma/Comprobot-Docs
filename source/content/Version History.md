@@ -1,3 +1,7 @@
+---
+position: "3"
+---
+
 - 1.0.2
 	- Fixed a typo in the templates file (`commmand_prefix` instead of `command_prefix`) which caused an error on startup.
 - 1.0.1

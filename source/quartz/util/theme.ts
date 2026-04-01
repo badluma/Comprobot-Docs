@@ -8,6 +8,7 @@ export interface ColorScheme {
   tertiary: string
   highlight: string
   textHighlight: string
+  hover: string
 }
 
 interface Colors {
@@ -51,6 +52,7 @@ ${stylesheet.join("\n\n")}
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
   --textHighlight: ${theme.colors.lightMode.textHighlight};
+  --hover: ${theme.colors.lightMode.hover};
 
   --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
   --bodyFont: "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
@@ -67,6 +69,7 @@ ${stylesheet.join("\n\n")}
   --tertiary: ${theme.colors.darkMode.tertiary};
   --highlight: ${theme.colors.darkMode.highlight};
   --textHighlight: ${theme.colors.darkMode.textHighlight};
+  --hover: ${theme.colors.darkMode.hover};
 }
 `
 }
