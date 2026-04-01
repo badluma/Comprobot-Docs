@@ -9,6 +9,7 @@ export interface ColorScheme {
   highlight: string
   textHighlight: string
   hover: string
+  hyperlinks: string
 }
 
 interface Colors {
@@ -53,6 +54,7 @@ ${stylesheet.join("\n\n")}
   --highlight: ${theme.colors.lightMode.highlight};
   --textHighlight: ${theme.colors.lightMode.textHighlight};
   --hover: ${theme.colors.lightMode.hover};
+  --hyperlinks: ${theme.colors.lightMode.hyperlinks};
 
   --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
   --bodyFont: "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
@@ -70,6 +72,7 @@ ${stylesheet.join("\n\n")}
   --highlight: ${theme.colors.darkMode.highlight};
   --textHighlight: ${theme.colors.darkMode.textHighlight};
   --hover: ${theme.colors.darkMode.hover};
+  --hyperlinks: ${theme.colors.darkMode.hyperlinks};
 }
 `
 }

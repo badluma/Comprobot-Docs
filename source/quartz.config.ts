@@ -39,6 +39,7 @@ const config: QuartzConfig = {
           highlight: "#FFFFFF",
           textHighlight: "#000000",
           hover: "#797979",
+          hyperlinks: "#0098FC",
         },
         darkMode: {
           light: "#000000", // Background
@@ -51,6 +52,7 @@ const config: QuartzConfig = {
           highlight: "#000000",
           textHighlight: "#FFFFFF",
           hover: "#929292",
+          hyperlinks: "#0098FC",
         },
       },
     },

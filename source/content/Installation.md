@@ -5,7 +5,6 @@ position: "2"
 Comprobot is available to install with both pipx and pip. However, I recommend installing it using pipx, since it is designed to install Python applications tools such as Comprobot. This guide is fully self-written, no AI used.
 
 ---
-
 ## Installing Python and pip
 
 Before we get started with installing Comprobot, you first have to install Python (since Comprobot is coded in Python).
@@ -116,7 +115,6 @@ pip3 --version
 If they return the version numbers, you're good to go. Otherwise, you can always submit a report in the _bug-reports_ channel on my [Discord server](https://discord.gg/g6rZtmQgbK).
 
 ---
-
 ## Installing pipx
 
 To install Comprobot, I recommend using pipx, a command-line tool designed to install Python applications. Here is how to install it.
@@ -209,7 +207,6 @@ pipx install comprobot
 ```
 
 ---
-
 ## Setting up the Discord bot
 
 Since you now have all the files on your machine, we now have to take care of the bot itself. To add it to your server, follow the following steps.
@@ -255,7 +252,6 @@ You should now be in the configuration window of your bot.
 Now, you can open the link in a new tab, select the wanted server and click "Authorize". If you are not the admin of the server the bot should be added to, send the link to the server owner so they can add the bot themselves.
 
 ---
-
 ## Customizing the settings
 
 Now, you want to add the bot token that you saved before to the bot. For that, you want to head to the data directory of your bot. To get the data directory, run the bot through your terminal with the following command.

@@ -18,6 +18,10 @@ PageTitle.css = `
   font-size: 1.75rem;
   margin: 0;
 }
+
+.page-title a {
+  color: var(--dark) !important;
+}
 `
 
 export default (() => PageTitle) satisfies QuartzComponentConstructor

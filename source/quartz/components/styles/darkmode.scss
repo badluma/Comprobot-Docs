@@ -30,10 +30,18 @@
 
 :root[saved-theme="dark"] {
   color-scheme: dark;
+
+  a {
+    color: var(--hyperlinks);
+  }
 }
 
 :root[saved-theme="light"] {
   color-scheme: light;
+
+  a {
+    color: var(--hyperlinks);
+  }
 }
 
 :root[saved-theme="dark"] .darkmode {
