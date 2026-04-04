@@ -1,19 +1,3 @@
-
-## v1.3.3
-
-- Fixed JSON parsing for Groq response in the publishing workflow by handling empty content, checking the `reasoning` field, and extracting JSON objects from surrounding prose or markdown fences.
-
-
-## v1.3.2
-
-- Updated GitHub Actions publish workflow to set the remote URL using the DOCS_PAT token for authenticated pushes.
-
-
-## v1.3.1
-
-- Replaced urllib with curl in the GitHub Actions workflow to avoid Cloudflare 1010 blocks during Groq API calls.
-- Removed the previous debug step that used urllib for testing the Groq response.
-
 ---
 position: "3"
 ---
