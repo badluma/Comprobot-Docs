@@ -1,3 +1,9 @@
+
+## v1.3.1
+
+- Replaced urllib with curl in the GitHub Actions workflow to avoid Cloudflare 1010 blocks during Groq API calls.
+- Removed the previous debug step that used urllib for testing the Groq response.
+
 ---
 position: "3"
 ---
