@@ -1,4 +1,9 @@
 
+## v1.3.2
+
+- Updated GitHub Actions publish workflow to set the remote URL using the DOCS_PAT token for authenticated pushes.
+
+
 ## v1.3.1
 
 - Replaced urllib with curl in the GitHub Actions workflow to avoid Cloudflare 1010 blocks during Groq API calls.
