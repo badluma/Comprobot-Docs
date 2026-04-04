@@ -1,6 +1,10 @@
 ---
 position: "3"
 ---
+
+- 1.3.1
+	- Updated system prompt and formatting in CI workflow.
+	- Adjusted changelog insertion logic in publish workflow.
 - 1.0.1
 	- Fixed an issue where the passage from the `bible` command had an extra newline by default.
 	- Removed `requirements.txt` from Git.
