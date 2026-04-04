@@ -1,4 +1,9 @@
 
+## v1.3.3
+
+- Fixed JSON parsing for Groq response in the publishing workflow by handling empty content, checking the `reasoning` field, and extracting JSON objects from surrounding prose or markdown fences.
+
+
 ## v1.3.2
 
 - Updated GitHub Actions publish workflow to set the remote URL using the DOCS_PAT token for authenticated pushes.
