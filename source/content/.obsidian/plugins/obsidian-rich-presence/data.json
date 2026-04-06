@@ -1,0 +1,62 @@
+{
+  "clientId": "1490745371205304431",
+  "globalDefaults": {
+    "enabled": true,
+    "display": {
+      "details": "📝 {file_name}",
+      "state": "🗂️ {vault_name}  ·  {file_count} notes",
+      "largeImageText": "Obsidian — {vault_name}",
+      "smallImageText": "{vault_name}"
+    },
+    "largeIcon": {
+      "type": "key",
+      "key": "obsidian",
+      "url": "https://obsidian.md/images/obsidian-logo-gradient.png",
+      "assetPath": ""
+    },
+    "smallIcon": {
+      "type": "",
+      "url": "",
+      "assetPath": ".rich-presence/vault-icon.png",
+      "key": "",
+      "fallbackEmoji": "📓"
+    },
+    "timestamps": {
+      "enabled": true,
+      "mode": "session"
+    },
+    "buttons": [
+      {
+        "enabled": false,
+        "label": "Visit my notes",
+        "url": ""
+      },
+      {
+        "enabled": false,
+        "label": "My GitHub",
+        "url": ""
+      }
+    ],
+    "privacyMode": {
+      "enabled": false,
+      "hideFileName": false,
+      "hideVaultName": false,
+      "hiddenFileName": "a secret file...",
+      "hiddenVaultName": "a private vault"
+    },
+    "variables": {},
+    "fileTypeIcons": {},
+    "idleSettings": {
+      "enabled": true,
+      "timeoutMinutes": 10,
+      "idleState": "💤 Away",
+      "idleDetails": "Idle"
+    },
+    "updateInterval": 15
+  },
+  "vaultOverrides": {},
+  "showStatusBarItem": true,
+  "showNoticeOnConnect": true,
+  "debugLogging": false,
+  "configFileName": "rich-presence.json"
+}

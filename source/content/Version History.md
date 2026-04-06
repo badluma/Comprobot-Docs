@@ -1,21 +1,37 @@
 ---
 position: "3"
 ---
-- 1.0.1
-	- Fixed an issue where the passage from the `bible` command had an extra newline by default.
-	- Removed `requirements.txt` from Git.
+
+- 2.0.1
+  - Fixed an issue where the bot couldn't start due to an incorrect entry point in `pyproject.toml`.
+- 2.0.0
+  - Added moderation functionality controlled by the `moderation.toml` file.
+  - Refactored code structure for better organization.
+  - Added `delete`, `kick`, `ban`, and `mute` actions for moderation.
+- 1.3.0
+  - Added reply and attachment context to AI chat functionality.
+  - Improved AI conversation context handling.
+  - Changed homepage URL in project configuration.
+- 1.1.3
+  - Updated version number.
+- 1.1.2
+  - Added option to disable AI responses when replying to the bot's own messages.
+  - Fixed an issue where `answer_to_reply` was not working correctly.
 - 1.1.0
-	- Added option to customize all of the bot's output through the new `output.toml` file, which has variables (e.g. `{{URL}}`) that you can place where e.g. the URL from the output should be placed inside the answer.
-	- Added support for multiple different outputs through the `output.toml` file.
-	- Moved the contents of the `success_messages.toml` files to the `output.toml` file and deleted all references to it from the code.
-	- Fixed a bug where the arguments for the `currency` command were in the wrong order.
-	- Fixed a bug where the changes of the money balance weren't saved in the `money.toml` file.
-	- Fixed a bug where the `bitcoin` command couldn't be called because it wasn't in the `process.py` script.
-	- Added better error handling to the `calculate` and `image` commands.
-	- Added a default shrug ASCII emoji (¯\\_(ツ)_/¯) to the `ascii_art` variable inside of the `config.toml file`.
+  - Added option to customize all of the bot's output through the new `output.toml` file, which has variables (e.g. `{{URL}}`) that you can place where e.g. the URL from the output should be placed inside the answer.
+  - Added support for multiple different outputs through the `output.toml` file.
+  - Moved the contents of the `success_messages.toml` files to the `output.toml` file and deleted all references to it from the code.
+  - Fixed a bug where the arguments for the `currency` command were in the wrong order.
+  - Fixed a bug where the changes of the money balance weren't saved in the `money.toml` file.
+  - Fixed a bug where the `bitcoin` command couldn't be called because it wasn't in the `process.py` script.
+  - Added better error handling to the `calculate` and `image` commands.
+  - Added a default shrug ASCII emoji (`¯\_(ツ)_/¯`) to the `ascii_art` variable inside of the `config.toml` file.
 - 1.0.2
-	- Fixed a typo in the templates file (`commmand_prefix` instead of `command_prefix`) which caused an error on startup.
+  - Fixed a typo in the templates file (`commmand_prefix` instead of `command_prefix`) which caused an error on startup.
 - 1.0.1
-	- Fixed an error where the imported scripts couldn't be found due to change in the project structure.
+  - Fixed an issue where the passage from the `bible` command had an extra newline by default.
+  - Removed `requirements.txt` from Git.
+- 1.0.1
+  - Fixed an error where the imported scripts couldn't be found due to change in the project structure.
 - 1.0.0
-	- Initial release.
+  - Initial release.

@@ -1,0 +1,84 @@
+{
+  "_comment": "Rich Presence configuration for Obsidian. Place this file in your vault root as rich-presence.json",
+  "_version": "1.0.0",
+
+  "enabled": true,
+
+  "display": {
+    "details": "📝 {file_name}",
+    "state": "🗂️ {vault_name}  ·  {file_count} notes",
+    "largeImageText": "Obsidian — {vault_name}",
+    "smallImageText": "{vault_name}"
+  },
+
+  "largeIcon": {
+    "type": "url",
+    "_comment_type": "Type can be 'url', 'asset', or 'key'. 'url' = external image URL. 'asset' = path to image file inside vault. 'key' = Discord asset key name.",
+    "url": "https://obsidian.md/images/obsidian-logo-gradient.png",
+    "assetPath": "",
+    "key": "obsidian"
+  },
+
+  "smallIcon": {
+    "type": "url",
+    "_comment_type": "Small icon shown over the large icon. Usually project/vault-specific.",
+    "url": "",
+    "assetPath": ".rich-presence/vault-icon.png",
+    "key": "",
+    "fallbackEmoji": "📓",
+    "_comment_fallback": "Emoji shown in tooltip if no icon is provided"
+  },
+
+  "timestamps": {
+    "enabled": true,
+    "mode": "session",
+    "_comment_mode": "Options: 'session' (since Obsidian opened), 'file' (since file opened), 'off'"
+  },
+
+  "buttons": [
+    {
+      "enabled": false,
+      "label": "Visit my notes",
+      "url": "https://example.com"
+    },
+    {
+      "enabled": false,
+      "label": "My GitHub",
+      "url": "https://github.com"
+    }
+  ],
+
+  "privacyMode": {
+    "enabled": false,
+    "hideFileName": false,
+    "hideVaultName": false,
+    "hiddenFileName": "a secret file...",
+    "hiddenVaultName": "a private vault"
+  },
+
+  "variables": {
+    "_comment": "You can define custom variables to use in display strings as {custom.my_var}",
+    "my_var": "my value",
+    "project": "My Project",
+    "status": "Writing"
+  },
+
+  "fileTypeIcons": {
+    "_comment": "Map file extensions to custom icon keys/URLs for the small icon.",
+    "md": "",
+    "canvas": "",
+    "pdf": "",
+    "png": "",
+    "jpg": ""
+  },
+
+  "idleSettings": {
+    "enabled": true,
+    "timeoutMinutes": 10,
+    "idleState": "💤 Away — {vault_name}",
+    "idleDetails": "Idle"
+  },
+
+  "updateInterval": 15,
+  "_comment_updateInterval": "How often to refresh the presence in seconds. Minimum 15."
+}

@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-rich-presence",
+  "name": "Rich Presence",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Highly customizable Discord Rich Presence for Obsidian. Show your vault, file, and session info on Discord with full control over text, icons, and per-vault settings.",
+  "author": "Your Name",
+  "authorUrl": "https://github.com/yourname",
+  "isDesktopOnly": true
+}

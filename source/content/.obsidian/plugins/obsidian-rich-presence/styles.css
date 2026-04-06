@@ -1,0 +1,19 @@
+/* Rich Presence Plugin Styles */
+
+.rp-var-table th {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rp-var-table td {
+  vertical-align: middle;
+}
+
+.rp-var-table tr:hover td {
+  background: var(--background-modifier-hover) !important;
+}

@@ -10,7 +10,7 @@
           {
             "id": "0571c1c94d829fac",
             "type": "tabs",
-            "dimension": 77.01244813278008,
+            "dimension": 78.50622406639005,
             "children": [
               {
                 "id": "47ef711f7e8c1d64",
@@ -60,20 +60,6 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Commands/General/Calculate.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "Calculate"
-                }
-              },
-              {
-                "id": "7194bc190f94d1d7",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
                     "file": "Version History.md",
                     "mode": "source",
                     "source": false
@@ -83,15 +69,141 @@
                 }
               }
             ],
-            "currentTab": 4
+            "currentTab": 3
           },
           {
             "id": "1e61889441727e17",
             "type": "tabs",
-            "dimension": 22.987551867219914,
+            "dimension": 21.49377593360996,
             "children": [
               {
                 "id": "c60fc57de613b303",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/silasbergen/Documents/Online/Documentation/Comprobot Docs/source/content",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: OpenCode"
+                }
+              },
+              {
+                "id": "9441b40f34994a87",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/silasbergen/Documents/Online/Documentation/Comprobot Docs/source/content",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: zsh"
+                }
+              },
+              {
+                "id": "bdfdf249e40cf324",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/silasbergen/Documents/Online/Documentation/Comprobot Docs/source/content",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: zsh"
+                }
+              },
+              {
+                "id": "a0e130d4744bfb4c",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
@@ -274,8 +386,19 @@
               "icon": "lucide-list",
               "title": "Outline of index"
             }
+          },
+          {
+            "id": "0bc15dc9f8400d04",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -290,19 +413,35 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false,
-      "copilot:Open Copilot Chat": false,
-      "terminal:Open terminal": false,
-      "quartz-syncer:Quartz Syncer publication center": false
+      "obsidian-git:Open Git source control": true,
+      "copilot:Open Copilot Chat": true,
+      "terminal:Open terminal": true,
+      "quartz-syncer:Quartz Syncer publication center": true
     }
   },
-  "active": "7194bc190f94d1d7",
+  "active": "b77831b90dd9f87b",
   "lastOpenFiles": [
-    "Installation.md",
-    "index.md",
-    "[[Installation]].md",
     "Commands/index.md",
+    "Commands/Settings/Banner.md",
+    "Commands/Settings/Change Keywords.md",
+    "Customization/Output.md",
+    "Customization/Money.md",
+    "Customization/Keywords.md",
+    "Customization/Config.md",
+    "Customization/Error Messages.md",
+    "Customization/Active Commands.md",
+    "Customization/AI.md",
+    "Customization/index.md",
+    "Customization/Moderation.md",
+    "index.md",
+    "Installation.md",
     "Version History.md",
+    "Untitled 1.base",
+    "Untitled.base",
+    "Untitled 2.base",
+    "Commands/General/ASCII Art.md",
+    "Customization",
+    "[[Installation]].md",
     "Commands/General/Dare.md",
     "Commands/General/Currency.md",
     "Commands/General/Chuck Norris.md",
@@ -310,28 +449,13 @@
     "Commands/General/Bitcoin.md",
     "Commands/General/Calculate.md",
     "Commands/General/Cat.md",
-    "Commands/General/ASCII Art.md",
     "Commands/General.md",
     "Commands/General/Quote.md",
-    "[[Commands]].md",
-    "Commands/General/Meme.md",
-    "[[Commands/General/ASCII.md",
     "[[Commands/General",
     "[[Commands",
-    "Commands/General/QR Code.md",
-    "Commands/General/Waifu.md",
-    "Commands/General/Image.md",
-    "Commands/General/Never Have I Ever.md",
-    "Commands/General/Truth.md",
-    "Commands/General/Dog.md",
-    "Commands/General/Duck.md",
-    "Commands/General/Fact.md",
     "Commands/Moderation",
     "copilot/copilot-custom-prompts",
     "copilot",
-    "Commands/Money",
-    "Commands/Settings",
-    "Commands/General",
-    "Commands"
+    "Commands/Money"
   ]
 }
