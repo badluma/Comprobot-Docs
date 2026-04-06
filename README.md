@@ -1,23 +1,23 @@
-# Obsidian / Quartz / GitHub Pages Template
+# Comprobot Docs
 
-Deployed URL: https://defenderofbasic.github.io/obsidian-quartz-template
+Comprobot is a highly-customizable, open-source Discord bot that you can run on your own computer or server.
 
-Template for hosting your Obsidian notebook on GitHub pages with CI deployment. 
+It's built with Python, has a wide range of fun and useful commands, and is designed to be easy to extend. You can add new commands, customize outputs , or change the behaviour of existing ones without touching the core code.
 
-## Basic setup
+It also comes with built-in AI capabilities when pinging the bot, with Ollama, Groq and Gemini as available providers.
 
-Full tutorial with screenshots & videos: https://dev.to/defenderofbasic/host-your-obsidian-notebook-on-github-pages-for-free-8l1. 
+## Installation
 
-It's basically (1) fork this (2) go to repo's "Settings" > "Pages", Under "Build and Deployment" select GitHub Actions. Then go to "Actions" and enable GitHub actions for your fork. Edit the pages in [source/content](./source/content) with Obsidian or any text editor. It generates HTML using [Quartz](https://github.com/jackyzha0/quartz). To generate the HTML locally, run `npx quartz build --serve` in `./source/`
+You can install Comprobot on your own Computer or Server with pipx by running the following command.
 
-## Raw HTML pages
+```bash
+pipx install comprobot
+```
 
-There is a [source/raw_html](./source/raw_html) folder that gets copied into the build folder in CI. This lets you host arbitrary HTML outside of quartz. Example: https://defenderofbasic.github.io/obsidian-quartz-template/raw-html-test.html
+If you don't already have Python, pip or pipx installed, you can find a comprehensive guide on how to install it using the [here](https://badluma.github.io/Comprobot-Docs/Installation). It also includes how to create the bot and add it to your server, if you aren't already familiar with the process.
 
-I made the "raw HTML" option for people who are generating HTML UI's with Claude/ChatGPT but want to tweak them/host them themselves. Or make a personal archive of web pages, etc.
+In short form: Install the bot using pipx, create a new application with Admin access on the [Discord Developer website](https://discord.com/developers/applications), add it to your server, reset the token, paste it into the `.env` file in the data directory, which you can find by running `comprobot` in your terminal. Then run `comprobot` again and you should be good to go.
 
-## Further customization
+## Contributing
 
-> Quartz is meant to be extremely configurable, even if you don’t know any coding. Most of the configuration you should need can be done by just editing quartz.config.ts or changing the layout in quartz.layout.ts.
-
-https://quartz.jzhao.xyz/configuration
+Contributions to the bot are always welcome. Just create a pull request for the [Comprobot repo](https://github.com/badluma/comprobot) on GitHub. If you aren't a coder, you can also make suggestions on my [Discord Server](https://discord.gg/g6rZtmQgbK) in the _suggestions_ channel.
