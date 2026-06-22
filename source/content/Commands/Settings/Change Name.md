@@ -1,35 +1,44 @@
-The `name` command changes the bot's username.
+The `name` command changes the bot's Discord username.
 
 ## Usage
 
 ```
-s!name <new_name>
+!config name <new_name>
 ```
 
-Aliases: `s!nickname`
+Aliases: `!config nickname`, `!set name`, `!settings name`
+
+Requires administrator permissions or bot admin status.
 
 ## Example response
 
 User:
-
 ```
-s!name NewBotName
+!config name CoolBot
 ```
 
 Bot:
-
 ```
-Name applied successfully.
+Name 'CoolBot' applied successfully.
 ```
 
 ## Source code
 
 ```python
-if command in keywords["settings"]["change_name"]:
-    if len(args) < 2:
-        return error_messages["missing_argument"]
-    if client is None or client.user is None:
-        return error_messages["bot_unavailable"]
-    await client.user.edit(username=args[1])
-    return success_messages["nickname_applied"]
+@settings_cmd.command(
+    name=keywords["settings"]["change_name"][0],
+    aliases=keywords["settings"]["change_name"][1:],
+)
+@_is_admin_or_bot_admin()
+async def name_cmd(self, ctx, *, name: str | None = None):
+    if not name:
+        await ctx.send(error_messages["missing_argument"])
+        return
+    if client.user is None:
+        await ctx.send(error_messages["bot_unavailable"])
+        return
+    await client.user.edit(username=name)
+    await ctx.send(
+        choice(output["settings"]["nickname_applied"]).replace("{{NAME}}", name)
+    )
 ```

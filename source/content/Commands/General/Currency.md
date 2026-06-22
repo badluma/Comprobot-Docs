@@ -6,18 +6,18 @@ The `currency` command converts an amount from one currency to another using the
 !currency <amount> <from_currency> <to_currency>
 ```
 
+Aliases: `!convert`, `!conv`
+
 ## Example response
 
 User:
-
 ```
 !currency 100 usd eur
 ```
 
 Bot:
-
 ```
-100 USD = 92.50 EUR
+100.0 USD = 92.50 EUR
 ```
 
 ## Source code
@@ -35,7 +35,6 @@ def currency(currency1, currency2, amount):
     available_currencies = requests.get(
         "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json"
     )
-
     if available_currencies.status_code != 200:
         return error_messages["unavailable"]
 
@@ -49,7 +48,6 @@ def currency(currency1, currency2, amount):
     raw_response = requests.get(
         f"https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/{currency1}.json"
     )
-
     if raw_response.status_code != 200:
         return error_messages["unavailable"]
 
@@ -59,6 +57,13 @@ def currency(currency1, currency2, amount):
         return error_messages["currency"]
 
     rate = raw_response[currency1][currency2]
-    response = rate * amount
-    return f"{amount} {currency1.upper()} = {response:.2f} {currency2.upper()}"
+    converted_amount = rate * amount
+    response = (
+        choice(output["general"]["currency"])
+        .replace(r"{{FROM_AMOUNT}}", str(amount))
+        .replace(r"{{FROM_CURRENCY}}", currency1.upper())
+        .replace(r"{{TO_AMOUNT}}", f"{converted_amount:.2f}")
+        .replace(r"{{TO_CURRENCY}}", currency2.upper())
+    )
+    return response
 ```

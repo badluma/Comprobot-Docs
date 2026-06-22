@@ -4,12 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "7b0e535a958860ee",
+        "id": "483e99b17bf1697d",
         "type": "split",
         "children": [
           {
             "id": "3cdff54b204c3b01",
             "type": "tabs",
+            "dimension": 52.40464344941957,
             "children": [
               {
                 "id": "6a935ddf1504775a",
@@ -17,29 +18,30 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "index.md",
+                    "file": "Commands/General/QR Code.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "index"
+                  "title": "QR Code"
                 }
               }
             ]
           },
           {
-            "id": "8bc2a1b2de8be7b6",
+            "id": "516cbc401a8c7e94",
             "type": "tabs",
+            "dimension": 47.59535655058043,
             "children": [
               {
-                "id": "d4c4821d4df6a0ee",
+                "id": "af29076b4f50663f",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
                   "type": "terminal:terminal",
                   "state": {
                     "terminal:terminal": {
-                      "cwd": "/Users/silasbergen/Documents/Online/Documentation/Comprobot Docs/source/content",
+                      "cwd": "/Users/badluma/Documents/Online/Documentation/Comprobot Docs/source/content",
                       "focus": false,
                       "profile": {
                         "args": [
@@ -70,10 +72,95 @@
                   },
                   "pinned": true,
                   "icon": "terminal",
-                  "title": "Terminal: OC | Version History.md cleanup and order fix"
+                  "title": "Terminal: ✳ Update Comprobot documentation to current version"
+                }
+              },
+              {
+                "id": "0e7d6b81e7e6e39d",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/badluma/Documents/Online/Documentation/Comprobot Docs/source/content",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: zsh"
+                }
+              },
+              {
+                "id": "8d66e98d0be01a79",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/badluma/Documents/Online/Documentation/Comprobot Docs/source/content",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: zsh"
                 }
               }
-            ]
+            ],
+            "currentTab": 2
           }
         ],
         "direction": "horizontal"
@@ -88,6 +175,7 @@
       {
         "id": "8a4c81639dc8783e",
         "type": "tabs",
+        "dimension": 58.60585197934595,
         "children": [
           {
             "id": "b77831b90dd9f87b",
@@ -96,7 +184,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -130,10 +218,27 @@
             }
           }
         ]
+      },
+      {
+        "id": "1559402fabc98390",
+        "type": "tabs",
+        "dimension": 41.39414802065405,
+        "children": [
+          {
+            "id": "0bc15dc9f8400d04",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 295.5
   },
   "right": {
     "id": "ba1ec06a672fb227",
@@ -207,26 +312,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md",
+                "file": "Commands/General/QR Code.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
-            }
-          },
-          {
-            "id": "0bc15dc9f8400d04",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outline of QR Code"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -241,17 +337,29 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": true,
       "copilot:Open Copilot Chat": true,
       "terminal:Open terminal": true,
-      "quartz-syncer:Quartz Syncer publication center": true
+      "quartz-syncer:Quartz Syncer publication center": true,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6a935ddf1504775a",
+  "active": "b77831b90dd9f87b",
   "lastOpenFiles": [
+    "CLI/Test.md",
+    "CLI/Config.md",
+    "CLI/Onboard.md",
+    "CLI/Start.md",
+    "CLI/index.md",
+    "CLI",
+    "Commands/General/QR Code.md",
+    "Installation.md",
+    "Commands/General/ASCII Art.md",
+    "Commands/General/Bible.md",
+    "Commands/General/Quote.md",
+    "index.md",
+    "Commands/General/Calculate.md",
     "Version History.md",
     "conflict-files-obsidian-git.md",
-    "Installation.md",
     "Commands/index.md",
     "Commands/Settings/Banner.md",
     "Commands/Settings/Change Keywords.md",
@@ -264,26 +372,14 @@
     "Customization/AI.md",
     "Customization/index.md",
     "Customization/Moderation.md",
-    "index.md",
     "Untitled 1.base",
     "Untitled.base",
     "Untitled 2.base",
-    "Commands/General/ASCII Art.md",
     "Customization",
-    "[[Installation]].md",
-    "Commands/General/Dare.md",
-    "Commands/General/Currency.md",
-    "Commands/General/Chuck Norris.md",
-    "Commands/General/Bible.md",
-    "Commands/General/Bitcoin.md",
-    "Commands/General/Calculate.md",
-    "Commands/General/Cat.md",
-    "Commands/General.md",
     "[[Commands/General",
     "[[Commands",
     "Commands/Moderation",
     "copilot/copilot-custom-prompts",
-    "copilot",
-    "Commands/Money"
+    "copilot"
   ]
 }

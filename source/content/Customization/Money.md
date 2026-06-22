@@ -3,7 +3,7 @@ title: Money
 position: "8"
 ---
 
-The `money.toml` file stores user balances for the economy system.
+The `.money.toml` file stores user balances for the economy system. It's a hidden file (note the leading dot) that the bot creates and manages on its own.
 
 ## Template
 

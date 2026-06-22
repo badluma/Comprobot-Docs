@@ -1,23 +1,23 @@
-The `banner` command changes the bot's banner image.
+The `banner` command changes the bot's banner image. Attach an image to the message.
 
 ## Usage
 
 ```
-s!banner <image>
+!config banner
 ```
 
-Attach an image to the message.
+Aliases: `!set banner`, `!settings banner`
+
+Requires administrator permissions or bot admin status.
 
 ## Example response
 
 User:
-
 ```
-s!banner [attached image]
+!config banner [attached image]
 ```
 
 Bot:
-
 ```
 Banner applied successfully.
 ```
@@ -25,15 +25,22 @@ Banner applied successfully.
 ## Source code
 
 ```python
-if command in keywords["settings"]["banner"]:
-    if not ctx.attachments:
-        return error_messages["no_attachments"]
-    if client is None or client.user is None:
-        return error_messages["bot_unavailable"]
-    new_banner = ctx.attachments[0]
-    await new_banner.save("Cache/banner.png")
-    with open("Cache/banner.png", "rb") as image_file:
-        image_data = image_file.read()
-    await client.user.edit(banner=image_data)
-    return success_messages["banner_applied"]
+@settings_cmd.command(
+    name=keywords["settings"]["banner"][0],
+    aliases=keywords["settings"]["banner"][1:],
+)
+@_is_admin_or_bot_admin()
+async def banner_cmd(self, ctx):
+    if not ctx.message.attachments:
+        await ctx.send(error_messages["no_attachment"])
+        return
+    cache_dir = user_cache_dir("Comprobot", appauthor=False)
+    os.makedirs(cache_dir, exist_ok=True)
+    await ctx.message.attachments[0].save(f"{cache_dir}/banner.png")
+    if client.user is None:
+        await ctx.send(error_messages["bot_unavailable"])
+        return
+    with open(f"{cache_dir}/banner.png", "rb") as f:
+        await client.user.edit(banner=f.read())
+    await ctx.send(choice(output["settings"]["banner_applied"]))
 ```

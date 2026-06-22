@@ -13,15 +13,13 @@ Requires administrator permissions or bot admin status.
 ## Example response
 
 User:
-
 ```
 !add John 100
 ```
 
 Bot:
-
 ```
-150$ added to to John
+100$ added to the account of John. They now have 150$.
 ```
 
 ## Source code
@@ -29,6 +27,13 @@ Bot:
 ```python
 def add_money(username, amount):
     data.money["members"][username] = data.money["members"].get(username, 0) + amount
-    data.save_toml(data.money, "data/.do_not_touch/money.toml")
-    return f"{data.money['members'][username]}{data.config['money_symbol']} added to to {username}"
+    data.save_toml(data.money, data.get_data_path(".money.toml"))
+    balance = data.money["members"][username]
+    return (
+        choice(data.output["money"]["add_money"])
+        .replace("{{AMOUNT}}", str(amount))
+        .replace("{{USERNAME}}", username)
+        .replace("{{BALANCE}}", str(balance))
+        .replace("{{MONEY_SYMBOL}}", data.config["money_symbol"])
+    )
 ```

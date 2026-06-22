@@ -6,18 +6,28 @@ The `calculate` command evaluates a mathematical expression and returns the resu
 !calculate <expression>
 ```
 
+Aliases: `!calc`
+
 ## Example response
 
 User:
-
 ```
 !calculate 2+2
 ```
 
 Bot:
-
 ```
-Result: 4
+4
+```
+
+User:
+```
+!calc (10 * 3) / 5
+```
+
+Bot:
+```
+6.0
 ```
 
 ## Source code
@@ -26,8 +36,12 @@ Result: 4
 def calculate(calculation):
     try:
         result = eval(calculation)
-        response = f"Result: {result}"
-    except Exception as e:
-        response = f"{error_messages['calculate']} (error {str(e)})"
+        response = choice(output["general"]["calculate"]).replace(
+            r"{{RESULT}}", str(result)
+        )
+    except ZeroDivisionError:
+        response = error_messages["calculate"]
+    except Exception:
+        response = error_messages["calculate"]
     return response
 ```

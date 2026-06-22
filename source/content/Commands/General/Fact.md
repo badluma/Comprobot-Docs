@@ -1,4 +1,5 @@
-The `fact` command returns a random fact from the [uselessfacts](https://uselessfacts.jsph.pl/) API.
+The `fact` command returns a random useless fact from the [Useless Facts API](https://uselessfacts.jsph.pl/).
+
 ## Usage
 
 ```
@@ -8,37 +9,19 @@ The `fact` command returns a random fact from the [uselessfacts](https://useless
 ## Example response
 
 ```
-Elwood Edwards did the voice for the AOL sound files (i.e. “You’ve got Mail!”).
+Elwood Edwards did the voice for the AOL sound files (i.e. "You've got Mail!").
 ```
 
 ## Source code
 
 ```python
-import requests
-from data import error_messages
-
-def access_api(url, parameter, error_message, headers=None):
-    if headers:
-        raw = requests.get(url, headers=headers)
-    else:
-        raw = requests.get(url)
-    if raw.status_code == 200:
-        try:
-            data = raw.json()
-            response = data[parameter]
-        except (requests.exceptions.JSONDecodeError, KeyError):
-            response = str(f"{error_message}")
-        except Exception as e:
-            response = str(f"{error_message} (Error {str(e)})")
-    else:
-        response = str(f"{error_message} (HTTP {raw.status_code})")
-
-    return response
-
 def fact():
-    return access_api(
+    success, fact_text = access_api(
         "https://uselessfacts.jsph.pl/api/v2/facts/random",
         "text",
         error_messages["fact"],
     )
+    if not success:
+        return fact_text
+    return choice(output["general"]["fact"]).replace(r"{{FACT}}", fact_text)
 ```

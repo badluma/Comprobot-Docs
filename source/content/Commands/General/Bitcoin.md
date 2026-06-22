@@ -6,20 +6,30 @@ The `bitcoin` command returns the current price of Bitcoin from the [CoinGecko A
 !bitcoin [currency]
 ```
 
+Aliases: `!btc`
+
 Defaults to USD if no currency is specified.
 
 ## Example response
 
 User:
-
 ```
 !bitcoin
 ```
 
 Bot:
-
 ```
-bitcoin is at 45000.00 usd rn
+The bitcoin price is currently at 45000.0 USD.
+```
+
+User:
+```
+!btc eur
+```
+
+Bot:
+```
+The bitcoin price is currently at 41500.0 EUR.
 ```
 
 ## Source code
@@ -33,7 +43,11 @@ def bitcoin(currency_parameter):
     if bitcoin_price.status_code == 200:
         data = bitcoin_price.json()
         if "bitcoin" in data and currency in data["bitcoin"]:
-            response = f"bitcoin is at {data['bitcoin'][currency]} {currency} rn"
+            response = (
+                choice(output["general"]["bitcoin"])
+                .replace(r"{{AMOUNT}}", str(data["bitcoin"][currency]))
+                .replace(r"{{CURRENCY}}", currency.upper())
+            )
         else:
             response = error_messages["currency"]
     else:

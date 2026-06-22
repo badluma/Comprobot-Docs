@@ -3,8 +3,10 @@ The `truth` command returns a random truth question from the [Truth or Dare API]
 ## Usage
 
 ```
-!truth
+!truth [rating]
 ```
+
+Optionally filter by rating: `pg`, `pg13`, or `r`.
 
 ## Example response
 
@@ -24,9 +26,4 @@ def tord(url, rating, max_retries=10):
         if not rating or data.get("rating") == rating:
             return data["question"]
     return None
-
-def truth():
-    return api.tord(
-        "https://api.truthordarebot.xyz/v1/truth", args[0] if args else None
-    )
 ```

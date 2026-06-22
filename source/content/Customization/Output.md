@@ -8,7 +8,7 @@ The `output.toml` file allows you to customize the format of command outputs usi
 ## Template
 
 ```toml
-[commands]
+[general]
 quote             = ["{{QUOTE}}\n~ {{AUTHOR}}"]
 joke              = ["{{SETUP}} ||{{PUNCHLINE}}||"]
 meme              = ["{{URL}}"]
@@ -23,13 +23,14 @@ calculate         = ["{{RESULT}}"]
 bitcoin           = ["The bitcoin price is currently at {{AMOUNT}} {{CURRENCY}}."]
 currency          = ["{{FROM_AMOUNT}} {{FROM_CURRENCY}} = {{TO_AMOUNT}} {{TO_CURRENCY}}"]
 qr_code           = ["{{URL}}"]
+reminder          = ["Reminder set in {{TIME}}"]
 ascii_art         = ["{{ASCII_ART}}"]
-
 truth             = ["{{QUESTION}}"]
 dare              = ["{{QUESTION}}"]
 wyr               = ["{{QUESTION}}"]
 never_have_i_ever = ["{{QUESTION}}"]
 paranoia          = ["{{QUESTION}}"]
+trivia            = ["## {{QUESTION}}\n1. {{CHOICE1}}\n2. {{CHOICE2}}\n3. {{CHOICE3}}\n4. {{CHOICE4}}\n\n-# Difficulty: {{DIFFICULTY}}\n-# Category: {{CATEGORY}}"]
 
 [settings]
 profile_picture_applied = ["Profile picture applied successfully."]
@@ -56,20 +57,22 @@ reason = "Sending banned text"
 
 ### Command Variables
 
-| Command                                 | Variables                                                                  |
-| --------------------------------------- | -------------------------------------------------------------------------- |
-| `quote`                                 | `{{QUOTE}}`, `{{AUTHOR}}`                                                  |
-| `joke`                                  | `{{SETUP}}`, `{{PUNCHLINE}}`                                               |
-| `meme`, `duck`, `dog`, `cat`, `qr_code` | `{{URL}}`                                                                  |
-| `waifu`                                 | `{{URL1}}`, `{{URL2}}`                                                     |
-| `chuck_norris`                          | `{{JOKE}}`                                                                 |
-| `fact`                                  | `{{FACT}}`                                                                 |
-| `bible`                                 | `{{PASSAGE}}`, `{{BOOK}}`, `{{CHAPTER}}`, `{{VERSE}}`                      |
-| `calculate`                             | `{{RESULT}}`                                                               |
-| `bitcoin`                               | `{{AMOUNT}}`, `{{CURRENCY}}`                                               |
-| `currency`                              | `{{FROM_AMOUNT}}`, `{{FROM_CURRENCY}}`, `{{TO_AMOUNT}}`, `{{TO_CURRENCY}}` |
-| `ascii_art`                             | `{{ASCII_ART}}`                                                            |
-| Truth or Dare                           | `{{QUESTION}}`                                                             |
+| Command                                 | Variables                                                                                  |
+| --------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `quote`                                 | `{{QUOTE}}`, `{{AUTHOR}}`                                                                  |
+| `joke`                                  | `{{SETUP}}`, `{{PUNCHLINE}}`                                                               |
+| `meme`, `duck`, `dog`, `cat`, `qr_code` | `{{URL}}`                                                                                  |
+| `waifu`                                 | `{{URL1}}`, `{{URL2}}`                                                                     |
+| `chuck_norris`                          | `{{JOKE}}`                                                                                 |
+| `fact`                                  | `{{FACT}}`                                                                                 |
+| `bible`                                 | `{{PASSAGE}}`, `{{BOOK}}`, `{{CHAPTER}}`, `{{VERSE}}`                                      |
+| `calculate`                             | `{{RESULT}}`                                                                               |
+| `bitcoin`                               | `{{AMOUNT}}`, `{{CURRENCY}}`                                                               |
+| `currency`                              | `{{FROM_AMOUNT}}`, `{{FROM_CURRENCY}}`, `{{TO_AMOUNT}}`, `{{TO_CURRENCY}}`                 |
+| `reminder`                              | `{{TIME}}`                                                                                 |
+| `ascii_art`                             | `{{ASCII_ART}}`                                                                            |
+| `trivia`                                | `{{QUESTION}}`, `{{CHOICE1}}`–`{{CHOICE4}}`, `{{DIFFICULTY}}`, `{{CATEGORY}}`              |
+| Truth or Dare                           | `{{QUESTION}}`                                                                             |
 
 ### Settings Variables
 
@@ -105,14 +108,14 @@ You can specify multiple output formats for a single command. The bot will rando
 ### Simple quote format
 
 ```toml
-[commands]
+[general]
 quote = ["\"{{QUOTE}}\" - {{AUTHOR}}"]
 ```
 
 ### Emphasized joke format
 
 ```toml
-[commands]
+[general]
 joke = ["**Setup:** {{SETUP}}\n||**Punchline:** {{PUNCHLINE}}||"]
 ```
 
@@ -126,6 +129,6 @@ check_balance = ["💰 {{USERNAME}}: {{BALANCE}}{{MONEY_SYMBOL}}"]
 ### Bible with styling
 
 ```toml
-[commands]
+[general]
 bible = ["📖 **{{BOOK}} {{CHAPTER}}:{{VERSE}}**\n\n{{PASSAGE}}"]
 ```

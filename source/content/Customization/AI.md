@@ -20,7 +20,7 @@ include_username     = true
 include_reply        = true
 include_attachment   = true
 
-system_prompt = """
+system_prompt_text = """
 You are a helpful assistant that gives short, helpful answers.
 Your answers can maximally be 1000 characters long.
 """
@@ -77,7 +77,7 @@ user_prompt_structure = """
 
 | Value                     | Description                                                |
 | ------------------------- | ---------------------------------------------------------- |
-| `system_prompt`           | Instructions for the AI behavior                           |
+| `system_prompt_text`      | Instructions for the AI behavior                           |
 | `user_prompt`             | Template for user messages (`{{USERNAME}}`, `{{MESSAGE}}`) |
 | `user_reply_prompt`       | Template for replied content (`{{REPLY}}`)                 |
 | `user_attachement_prompt` | Template for attachments (`{{FILE}}`)                      |
@@ -125,7 +125,7 @@ model       = "qwen/qwen3-32b"
 ### Custom system prompt
 
 ```toml
-system_prompt = """
+system_prompt_text = """
 You are a sarcastic assistant who answers questions concisely.
 Keep responses under 500 characters.
 Never use emojis in your responses.

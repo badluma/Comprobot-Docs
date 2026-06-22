@@ -3,12 +3,12 @@ title: Error Messages
 position: "4"
 ---
 
-The `error-messages.toml` file contains custom error messages for when commands fail.
+The `error_messages.toml` file contains custom error messages for when commands fail.
 
 ## Template
 
 ```toml
-quote      = "Failed to get a quote."
+quote             = "Failed to get a quote."
 joke              = "Failed to get a joke."
 meme              = "Failed to get a meme."
 waifu             = "Failed to get a waifu image."
@@ -24,16 +24,19 @@ dare              = "Failed to get a dare question."
 wyr               = "Failed to get a Would You Rather question."
 never-hie         = "Failed to get a Never Have I Ever question."
 paranoia          = "Failed to get a paranoia question."
+trivia            = "Failed to get a trivia question."
 calculate         = "Invalid calculation. Use +-*/"
 bitcoin           = "Failed to get the current bitcoin price."
 currency          = "Unknown currency."
 unavailable       = "API unavailable."
-
 unknown_command   = "Unknown command."
 unknown_argument  = "Unknown argument."
 missing_argument  = "Missing argument."
 no_attachment     = "No attachment given."
 bot_unavailable   = "Bot not available."
+unknown_category  = "Unknown category."
+no_ascii_art      = "No ASCII art available."
+unknown_unit      = "Unknown unit: {{UNIT}}"
 ```
 
 ## Values
@@ -58,6 +61,7 @@ bot_unavailable   = "Bot not available."
 | `wyr`               | Error message when the wyr API fails                                              |
 | `never-hie`         | Error message when the NHIE API fails                                             |
 | `paranoia`          | Error message when the paranoia API fails                                         |
+| `trivia`            | Error message when the trivia API fails                                           |
 | `calculate`         | Error message for invalid calculations                                            |
 | `bitcoin`           | Error message when the bitcoin API fails                                          |
 | `currency`          | Error message for unknown currency                                                |
@@ -65,13 +69,16 @@ bot_unavailable   = "Bot not available."
 
 ### General Error Messages
 
-| Value              | Description                            |
-| ------------------ | -------------------------------------- |
-| `unknown_command`  | Message for unknown commands           |
-| `unknown_argument` | Message for unknown arguments          |
-| `missing_argument` | Message for missing arguments          |
-| `no_attachment`    | Message when no attachment is provided |
-| `bot_unavailable`  | Message when the bot is unavailable    |
+| Value              | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| `unknown_command`  | Message for unknown commands                                 |
+| `unknown_argument` | Message for unknown arguments                                |
+| `missing_argument` | Message for missing arguments                                |
+| `no_attachment`    | Message when no attachment is provided                       |
+| `bot_unavailable`  | Message when the bot is unavailable                          |
+| `unknown_category` | Message for an unknown `!help` category                      |
+| `no_ascii_art`     | Message when no ASCII art is configured                      |
+| `unknown_unit`     | Message for an invalid reminder time unit (supports `{{UNIT}}`) |
 
 ## Examples
 

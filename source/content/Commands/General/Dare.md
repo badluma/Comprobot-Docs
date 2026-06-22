@@ -3,11 +3,19 @@ The `dare` command returns a random dare from the [Truth or Dare API](https://ap
 ## Usage
 
 ```
-!dare
+!dare [rating]
 ```
+
+Optionally filter by rating: `pg`, `pg13`, or `r`.
 
 ## Example response
 
+User:
+```
+!dare
+```
+
+Bot:
 ```
 Send a voice message to someone saying "I love you"
 ```
@@ -24,9 +32,4 @@ def tord(url, rating, max_retries=10):
         if not rating or data.get("rating") == rating:
             return data["question"]
     return None
-
-def dare():
-    return api.tord(
-        "https://api.truthordarebot.xyz/api/dare", args[0] if args else None
-    )
 ```

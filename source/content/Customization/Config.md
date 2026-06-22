@@ -3,67 +3,58 @@ title: Config
 position: "1"
 ---
 
-The `config.toml` file contains basic bot configuration settings.
+The `config.toml` file contains the basic settings for your bot.
 
 ## Template
 
 ```toml
-command_prefix =  "!"
-settings_prefix = "s!"
-music_prefix    = "m!"
+prefix         = "!"
 
-money_symbol    = "$"
-bot_admins      = []
-ascii_art       = ["¯\\_(ツ)_/¯"]
+money_symbol   = "$"
+ascii_art      = ["¯\\_(ツ)_/¯"]
+bot_admins     = []
 
-debug_mode      = false
+debug_mode     = false
+
+whitelist      = []
+whitelist_mode = false
 ```
 
 ## Values
 
-### Command Prefixes
-
-| Value             | Type   | Description                                           |
-| ----------------- | ------ | ----------------------------------------------------- |
-| `command_prefix`  | string | The prefix used to invoke regular commands            |
-| `settings_prefix` | string | The prefix used to invoke settings commands           |
-| `music_prefix`    | string | The prefix used for music commands (currently unused) |
-
-### Money
-
-| Value          | Type   | Description                                                    |
-| -------------- | ------ | -------------------------------------------------------------- |
-| `money_symbol` | string | The symbol used to display currency amounts                    |
-| `bot_admins`   | list   | List of Discord user IDs who have admin access to bot commands |
-
-### Fun
-
-| Value       | Type | Description                                                         |
-| ----------- | ---- | ------------------------------------------------------------------- |
-| `ascii_art` | list | List of ASCII art strings that the `ascii` command randomly returns |
-
-### Debug
-
-| Value        | Type    | Description                        |
-| ------------ | ------- | ---------------------------------- |
-| `debug_mode` | boolean | Enables debug mode for development |
+| Value          | Type    | Description                                                       |
+| -------------- | ------- | ----------------------------------------------------------------- |
+| `prefix`       | string  | The prefix used to invoke all commands                            |
+| `money_symbol` | string  | The symbol displayed next to money amounts                        |
+| `bot_admins`   | list    | Discord user IDs that have bot admin access                       |
+| `ascii_art`    | list    | ASCII art strings that `!ascii` randomly returns                  |
+| `debug_mode`     | boolean | Run moderation checks on admin and bot messages too (for testing) |
+| `whitelist`      | list    | Channel IDs the bot is limited to when whitelist mode is on        |
+| `whitelist_mode` | boolean | Restrict the bot to only respond in whitelisted channels           |
 
 ## Examples
 
 ### Change command prefix
 
 ```toml
-command_prefix = "?"
+prefix = "?"
 ```
 
-### Add bot admin
+### Add bot admins
 
 ```toml
-bot_admins = [123456789012345678]
+bot_admins = [123456789012345678, 987654321098765432]
 ```
 
 ### Add custom ASCII art
 
 ```toml
 ascii_art = ["¯\\_(ツ)_/¯", "( ͡° ͜ʖ ͡°)", "┬─┬ノ( º _ ºノ)"]
+```
+
+### Restrict the bot to specific channels
+
+```toml
+whitelist      = [123456789012345678, 987654321098765432]
+whitelist_mode = true
 ```

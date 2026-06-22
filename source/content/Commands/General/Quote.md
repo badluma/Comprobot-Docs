@@ -1,4 +1,5 @@
-The `quote` command returns a random command from the [zenquotes.io](https://zenquotes.io/) API.
+The `quote` command returns a random inspirational quote from the [ZenQuotes API](https://zenquotes.io/), falling back to the [Quotable API](https://github.com/lukePeavey/quotable) if ZenQuotes is unavailable.
+
 ## Usage
 
 ```
@@ -8,24 +9,26 @@ The `quote` command returns a random command from the [zenquotes.io](https://zen
 ## Example response
 
 ```
-Change yourself - you are in control. 
-~Mahatma Gandhi
+Change yourself - you are in control.
+~ Mahatma Gandhi
 ```
 
 ## Source code
 
 ```python
-import requests
-from data import error_messages
-
 def quote():
-    quote_response = requests.get("https://zenquotes.io/api/random")
-    try:
-        data = quote_response.json()
-        fetched_quote = data[0]["q"]
-        author = data[0]["a"]
-        response = f"""{fetched_quote}\n~{author}"""
-    except (requests.exceptions.JSONDecodeError, KeyError, IndexError):
-        response = error_messages["quote"]
-    return response
+    for fetcher in (_fetch_quote_zenquotes, _fetch_quote_quotable):
+        try:
+            result = fetcher()
+            if result is None:
+                continue
+            fetched_quote, author = result
+            return (
+                choice(output["general"]["quote"])
+                .replace(r"{{QUOTE}}", fetched_quote)
+                .replace(r"{{AUTHOR}}", author)
+            )
+        except (requests.exceptions.RequestException, KeyError, IndexError):
+            continue
+    return error_messages["quote"]
 ```

@@ -3,8 +3,10 @@ The `wyr` command returns a random "Would You Rather" question from the [Truth o
 ## Usage
 
 ```
-!wyr
+!wyr [rating]
 ```
+
+Optionally filter by rating: `pg`, `pg13`, or `r`.
 
 ## Example response
 
@@ -24,9 +26,4 @@ def tord(url, rating, max_retries=10):
         if not rating or data.get("rating") == rating:
             return data["question"]
     return None
-
-def wyr():
-    return api.tord(
-        "https://api.truthordarebot.xyz/api/wyr", args[0] if args else None
-    )
 ```

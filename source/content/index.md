@@ -2,27 +2,29 @@
 title: Comprobot Documentation
 ---
 
-Comprobot is a highly-customizable, open-source Discord bot that you can run on your own computer or server.
+Comprobot is a highly customizable, open-source Discord bot that you can run on your own computer or server.
 
-It's built with Python, has a wide range of fun and useful commands, and is designed to be easy to extend. You can add new commands, customize outputs , or change the behaviour of existing ones without touching the core code.
+It's built with Python and comes with a wide range of fun and useful commands. You can add new commands, customize response formats, or change the behavior of existing ones without touching the core code — all through simple TOML config files.
 
-It also comes with built-in AI capabilities when pinging the bot, with Ollama, Groq and Gemini as available providers.
+It also has built-in AI chat support, activated when you @mention the bot. Supported providers are Ollama, Groq, and Gemini.
+
+Comprobot also comes with a web dashboard for managing your configuration from the browser.
 
 ## Installation
 
-You can install Comprobot on your own Computer or Server with pipx by running the following command.
+Install Comprobot with pipx:
 
 ```bash
 pipx install comprobot
 ```
 
-If you don't already have Python, pip or pipx installed, you can find a comprehensive guide on how to install it using the [here](Installation). It also includes how to create the bot and add it to your server, if you aren't already familiar with the process.
+If you don't have Python or pipx yet, check out the full [Installation guide](Installation). It also covers creating a Discord bot application and adding it to your server.
 
-In short form: Install the bot using pipx, create a new application with Admin access on the [Discord Developer website](https://discord.com/developers/applications), add it to your server, reset the token, paste it into the `.env` file in the data directory, which you can find by running `comprobot` in your terminal. Then run `comprobot` again and you should be good to go.
+In short: install via pipx, create a bot on the [Discord Developer Portal](https://discord.com/developers/applications), add it to your server, copy the token into the `.env` file in the data directory (shown when you first run `comprobot start`), then run `comprobot start` again.
 
 ## Contributing
 
-Contributions to the bot are always welcome. Just create a pull request for the [Comprobot repo](https://github.com/badluma/comprobot) on GitHub. If you aren't a coder, you can also make suggestions on my [Discord Server](https://discord.gg/g6rZtmQgbK) in the _suggestions_ channel.
+Pull requests are always welcome on the [Comprobot GitHub repo](https://github.com/badluma/comprobot). If you have a suggestion but aren't a coder, feel free to drop it in the _suggestions_ channel on my [Discord server](https://discord.gg/g6rZtmQgbK).
 
 ## Available commands
 
@@ -38,27 +40,33 @@ Contributions to the bot are always welcome. Just create a pull request for the 
 	- [[Commands/General/Dog]]
 	- [[Commands/General/Duck]]
 	- [[Commands/General/Fact]]
-	- [[Commands/General/Image]]
+	- [[Commands/General/Help]]
 	- [[Commands/General/Joke]]
 	- [[Commands/General/Meme]]
 	- [[Commands/General/Never Have I Ever]]
 	- [[Commands/General/Paranoia]]
 	- [[Commands/General/QR Code]]
 	- [[Commands/General/Quote]]
+	- [[Commands/General/Reminder]]
+	- [[Commands/General/Trivia]]
 	- [[Commands/General/Truth]]
 	- [[Commands/General/Waifu]]
 	- [[Commands/General/WYR]]
-- Money
+- **Money**
 	- [[Commands/Money/Add Money]]
 	- [[Commands/Money/Balance]]
 	- [[Commands/Money/Remove Money]]
-- Settings
+- **Settings**
 	- [[Commands/Settings/Banner]]
 	- [[Commands/Settings/Change Keywords]]
 	- [[Commands/Settings/Change Name]]
 	- [[Commands/Settings/Profile Picture]]
-- Moderation
+- **Moderation**
 	- [[Commands/Moderation/Purge]]
+
+## CLI
+
+Comprobot has several CLI subcommands: `start`, `dashboard`, `onboard`, `config`, `test`, and `reset`. See the [CLI reference](CLI) for details.
 
 ## Customization
 
@@ -70,3 +78,4 @@ Contributions to the bot are always welcome. Just create a pull request for the 
 - [[Customization/AI]]
 - [[Customization/Moderation]]
 - [[Customization/Money]]
+- [[Customization/Descriptions]]

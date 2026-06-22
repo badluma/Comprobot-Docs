@@ -1,4 +1,5 @@
-A command that fetches a random joke from the [Official Jokes API from Appspot](https://official-joke-api.appspot.com/jokes/random) and hides the punchline using Discord's spoiler protection.
+The `joke` command fetches a random joke from the [Official Jokes API](https://official-joke-api.appspot.com/jokes/random) and hides the punchline using Discord's spoiler tags.
+
 ## Usage
 
 ```
@@ -8,46 +9,26 @@ A command that fetches a random joke from the [Official Jokes API from Appspot](
 ## Example response
 
 ```
-What do you get when you cross a snowman with a vampire? ||He let out a little wine.||
+What do you get when you cross a snowman with a vampire? ||Frostbite.||
 ```
 
-*The text in between `||` is hidden until you click it.*
+*The text between `||` is hidden until clicked.*
 
 ## Source code
 
 ```python
-import requests
-from data import error_messages
-
-def access_api(url, parameter, error_message, headers=None):
-    if headers:
-        raw = requests.get(url, headers=headers)
-    else:
-        raw = requests.get(url)
-    if raw.status_code == 200:
-        try:
-            data = raw.json()
-            response = data[parameter]
-        except (requests.exceptions.JSONDecodeError, KeyError):
-            response = str(f"{error_message}")
-        except Exception as e:
-            response = str(f"{error_message} (Error {str(e)})")
-    else:
-        response = str(f"{error_message} (HTTP {raw.status_code})")
-
-    return response
-
 def joke():
-    setup = access_api(
-        "https://official-joke-api.appspot.com/jokes/random",
-        "setup",
-        error_messages["joke"],
-    )
-    punchline = access_api(
-        "https://official-joke-api.appspot.com/jokes/random",
-        "punchline",
-        error_messages["joke"],
-    )
-    response = f"{setup} ||{punchline}||"
+    raw = requests.get("https://official-joke-api.appspot.com/jokes/random")
+    if raw.status_code != 200:
+        return f"{error_messages['joke']} (HTTP {raw.status_code})"
+    try:
+        data = raw.json()
+        response = (
+            choice(output["general"]["joke"])
+            .replace(r"{{SETUP}}", data["setup"])
+            .replace(r"{{PUNCHLINE}}", data["punchline"])
+        )
+    except (requests.exceptions.JSONDecodeError, KeyError):
+        response = error_messages["joke"]
     return response
 ```

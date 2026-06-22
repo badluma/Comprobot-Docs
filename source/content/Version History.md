@@ -2,6 +2,60 @@
 position: "3"
 ---
 
+- 3.0.0
+	- Added a web dashboard (`comprobot dashboard`) for managing configuration from the browser, launched automatically alongside the bot.
+	- Centralized the data directory and added a `--path` flag and `COMPROBOT_DATA_DIR` variable for choosing a custom config location.
+	- Updated the config cleanup process to drop orphaned keys.
+	- Fixed a crash on Windows.
+- 2.5.1
+	- Fixed a key error in the templates.
+- 2.5.0
+	- Added the `trivia` and `reminder` commands.
+	- Added fallback APIs for several commands so they keep working when the primary source is down.
+	- Added a short startup delay before the bot connects.
+- 2.4.3
+	- Replaced the file-based version check with the `importlib.metadata` library.
+	- Added a new installation testing workflow.
+- 2.4.2
+	- Added the `comprobot reset` command and the `-v`/`--version` flag.
+	- Removed the music commands.
+	- Rewrote `data.py` and split `active.toml` into `general`, `settings`, and `money` sections.
+	- Added whitelist mode (`whitelist`, `whitelist_mode`) to restrict the bot to specific channels.
+	- Switched command dispatch to discord.py's `get_context`/`invoke`.
+	- Added automatic documentation updates to the publishing workflow.
+- 2.3.1 – 2.3.4
+	- Replaced the `image` group command with separate `cat`, `dog`, and `duck` commands.
+	- Added a `--daemon` flag to run the bot in the background.
+	- Added Homebrew bottles for faster installs.
+	- Fixed architecture compatibility issues on Windows.
+	- Fixed an issue where the bot didn't react to other bots' messages.
+	- Fixed several publishing (winget, scoop) and CI testing issues.
+- 2.3.0
+	- Renamed the "Commands" command category to "General".
+	- Added a new, improved `help` command.
+	- Introduced an automated Discord testing workflow.
+- 2.2.6
+	- Replaced the AI provider SDKs with direct `httpx` calls to reduce install size.
+- 2.2.5
+	- Removed a debug line that printed CLI arguments on startup.
+	- Added better assets.
+- 2.2.2 – 2.2.4
+	- Fixed several publishing workflow issues (AUR deploying, Homebrew repo name, release version tag creation).
+- 2.2.1
+	- Fixed an entry point bug that caused the bot to crash on startup.
+- 2.2.0
+	- Added `comprobot config` CLI command for editing configuration files interactively (TUI) or non-interactively (`comprobot config <file> <key> <value>`).
+	- Added Docker support.
+- 2.1.1 – 2.1.9
+	- Added Scoop (Windows), APT (Ubuntu/Debian/Kali), and AUR (Arch) as supported package managers.
+	- Fixed an encoding issue that caused errors on Windows.
+	- Fixed several APT packaging and dependency issues.
+- 2.1.0
+	- Rewrote command processing to use `discord.ext.commands` for better structure.
+	- Added CLI argument parsing: the bot now uses proper subcommands (`comprobot start`, `comprobot onboard`, `comprobot test`).
+	- Added `comprobot onboard` interactive setup wizard for first-time configuration.
+	- Added `comprobot test` for testing commands without a live Discord connection.
+	- Added Homebrew and PyPI publishing to the CI/CD pipeline.
 - 2.0.4
 	- Fixed workflow with a delay for the pkill command to actually start a new screen instance instead of just updating the bot.
 - 2.0.3

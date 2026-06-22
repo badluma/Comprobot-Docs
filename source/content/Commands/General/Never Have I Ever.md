@@ -1,17 +1,19 @@
-The `never-have-i-ever` command returns a random "Never Have I Ever" question from the [Truth or Dare API](https://api.truthordarebot.xyz/).
+The `never-have-i-ever` command returns a random "Never Have I Ever" statement from the [Truth or Dare API](https://api.truthordarebot.xyz/).
 
 ## Usage
 
 ```
-!never-have-i-ever
+!never-have-i-ever [rating]
 ```
 
 Aliases: `!nhie`
 
+Optionally filter by rating: `pg`, `pg13`, or `r`.
+
 ## Example response
 
 ```
-Never have I ever sent a text to the wrong person
+Never have I ever sent a text to the wrong person.
 ```
 
 ## Source code
@@ -26,9 +28,4 @@ def tord(url, rating, max_retries=10):
         if not rating or data.get("rating") == rating:
             return data["question"]
     return None
-
-def never_have_i_ever():
-    return api.tord(
-        "https://api.truthordarebot.xyz/api/nhie", args[0] if args else None
-    )
 ```
